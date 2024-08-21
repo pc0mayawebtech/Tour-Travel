@@ -1,0 +1,81 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.footerWrapper {
+    background-color: var(--black);
+    font-weight: 600;
+    padding: 2rem;
+    width: 100%;
+}
+
+.footerWrapper .companyLogo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.footerWrapper .compnayInfo {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    font-weight: 500;
+    color: var(--white);
+    text-align: start;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+.footerWrapper .social-Media {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footerWrapper .social-Media .iconsHandle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    text-align: center;
+}
+
+.footerWrapper .social-Media .iconsHandle:hover {
+    color: var(--blue);
+    font-weight: 600;
+    transform: translateY(-8px);
+    transition: all .5s;
+}
+
+.footerWrapper .mainHead {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.footerWrapper ul {
+    padding: 0rem;
+    text-align: center;
+}
+
+.footerWrapper ul li {
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.footerWrapper .footInfoLink {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footerWrapper .footInfoLink:hover {
+    color: var(--blue);
+    text-decoration: underline;
+    transition: all .2s;
+}

@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.outerBox{
+    background-color: var(--white);
+    width: 100%;
+    font-weight: 700;
+    padding: 1rem;
+    position: relative;
+    z-index: 9999;
+}
+
+.outerBox .InnerOuterWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.outerBox .logo span{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.outerBox .innerMenuList ul{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0rem;
+}
+
+.outerBox .innerMenuList ul li{
+    text-align: center; 
+    display: inline-block;
+    margin: 0rem 1rem;
+}
+
+.outerBox .innerMenuList ul li ul{
+   background-color: var(--white);
+   font-weight: 400;
+   filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 7px);
+   position: fixed;
+   box-shadow: #cbcbcb 0 4px 8px 0;
+   display: block;
+   border-radius: 8px;
+   padding: 0.9rem;
+  margin-top: 1rem;
+}
+
+.outerBox .innerMenuList ul li ul li{
+    display: block;
+    margin: 1.1rem 0rem;
+    text-align: left;
+}
+
+.outerBox .innerMenuList ul li ul li .subMenuLink{
+   text-decoration: none;
+   color: var(--black);
+   font-weight: 500;
+}
+
+.outerBox .innerMenuList ul li ul .subMenuLink:hover{
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.outerBox .innerMenuList ul li .linkMenu{
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.outerBox .innerMenuList ul li .linkMenu:hover{
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.outerBox .createAccount{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.outerBox .createAccount .user1{
+    font-size: 1rem;
+    color: var(--blue);
+    font-weight: 400;
+    cursor: pointer;
+    padding: 0.7rem 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.outerBox .createAccount .user1:hover{
+   background-color: var(--blue);
+   color: var(--white);
+   border: none;
+   padding: 0.6rem 0.8rem;
+}
+
+.outerBox .createAccount .user2{
+    font-size: 1rem;
+    color: var(--blue);
+    font-weight: 400;
+    border: 1px solid var(--blue);
+    padding: 0.6rem 0.8em;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.outerBox .createAccount .user2:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+}

@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.outerBoxWrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-box {
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.login-box input:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.login-box .formError{
+  color: var(--red);
+  font-weight:500;
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  background-color: #00c6ff;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-box button:hover {
+  background-color: #0071a1;
+}
+
+.login-box p {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.login-box p .linkingtext {
+  color: #ffefba;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-box p .linkingtext:hover {
+  text-decoration: underline;
+  color: #0071a1;
+  font-weight: 500;
+}
+
+.forgot-password {
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.forgot-password .linkingtext {
+  color: #ffefba;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password .linkingtext:hover {
+  text-decoration: underline;
+  color: #0071a1;
+  font-weight: 500;
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 20px;
+    max-width: 80%;
+  }
+
+  .login-box h2 {
+    font-size: 22px;
+  }
+
+  .login-box input, .login-box button {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .forgot-password {
+    font-size: 12px;
+  }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 600px) {
+  .login-box {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .login-box h2 {
+    font-size: 20px;
+  }
+
+  .login-box input, .login-box button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .forgot-password {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-box {
+    padding: 10px;
+    max-width: 95%;
+  }
+
+  .login-box h2 {
+    font-size: 18px;
+  }
+
+  .login-box input, .login-box button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .forgot-password {
+    font-size: 10px;
+  }
+}
