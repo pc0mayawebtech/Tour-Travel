@@ -11,19 +11,28 @@ body {
     overflow-x: hidden;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    color: #fff;
-    width: 40px;
-    height: 40px;
-}
-
 .swiper-button-prev {
     left: 10px;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 50%;
 }
 
 .swiper-button-next {
     right: 10px;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px !important;
+    color: var(--black);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sliderOuterBox {
@@ -31,19 +40,12 @@ body {
     background-position: center;
     height: 100vh;
 }
-
 
 .sliderOuterBox {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
-}
-
-.sliderOuterBox .bannerBooking {
-    position: absolute;
-    width: 100%;
-    bottom: 17.813rem;
 }
 
 .sliderOuterBox .ContentBox {

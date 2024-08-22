@@ -19,19 +19,7 @@ const SliderCarousal = () => {
     >
       {HomeSlider.map((item, id) => (
         <SwiperSlide key={id}>
-          <div
-            className='sliderOuterBox'
-            style={{ backgroundImage: `url(${item.image})` }}
-          >
-            <div className='bannerBooking'>
-              <div className="container">
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className='sliderOuterBox' style={{ backgroundImage: `url(${item.image})` }} >
             <div className='row justify-content-center'>
               <div className="col-lg-9">
                 <div className='ContentBox'>

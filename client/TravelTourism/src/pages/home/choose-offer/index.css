@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.boxChooseOuterWrapper {
+    background-color: var(--lightgrey);
+    font-weight: 600;
+    padding: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boxChooseOuterWrapper:hover{
+    background-color: var(--white);
+    font-weight: 600;
+    box-shadow: #cbcbcb 0 4px 8px 0;
+    transition: all .3s ease-in-out;
+}
+
+.boxChooseOuterWrapper .iconOuterSide {
+    padding: 1rem;
+    border: 1px dotted var(--blue);
+    font-weight: 500;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+.boxChooseOuterWrapper .innerSubInfo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+}
+
+.boxChooseOuterWrapper .innerSubCont {
+    font-size: 1rem;
+    font-weight: #ddd;
+    font-weight: 400;
+    margin-bottom: 0rem;
+}

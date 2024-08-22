@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -7,4 +7,235 @@
 
 body {
     background: #fff !important;
+}
+
+.HomeBanner {
+    position: relative;
+}
+
+.bannerBooking {
+    position: absolute;
+    bottom: 1.2rem;
+    width: 100%;
+    z-index: 9999;
+}
+
+.bannerBooking .bookingLayer {
+    background-color: var(--white);
+    font-weight: 600;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 10px;
+    padding: 1rem;
+    position: sticky;
+    height: 80px;
+}
+
+.search-icon-bg .locateIcon {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    background-color: var(--light);
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+    font-size: 20px;
+}
+
+.banner-select {
+    margin-top: -10px;
+}
+
+.banner-select .innerTextInfo {
+    font-size: 1rem;
+    line-height: 1.625;
+    font-weight: 500;
+}
+
+.banner-select .nice-select {
+    position: relative;
+    border: none;
+    padding-inline-start: 0;
+    color: var(--grey);
+    font-size: 1rem;
+    height: 0;
+    line-height: 0;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.banner-select .nice-select .countryList {
+    background-color: var(--white);
+    position: relative;
+    top: 0.8rem;
+    border-radius: 8px;
+    box-shadow: #cbcbcb 0 4px 8px 0;
+    padding-left: 1rem;
+    height: 28vh;
+}
+
+.banner-select .nice-select .countryList .option {
+    cursor: pointer;
+    line-height: 2.5;
+    list-style: none;
+    outline: none;
+    text-align: left;
+    transition: all .2s;
+}
+
+.banner-select .nice-select .countryList .option .countryVisitLink {
+    text-decoration: none;
+    color: var(--grey);
+    font-weight: 400;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.banner-select .nice-select input {
+    border: none;
+    box-shadow: #cbcbcb 0 4px 8px 0;
+    border: 1px solid #cbcbcb;
+    padding: 0.1rem;
+    outline: none;
+}
+
+.date-picker-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.date-input {
+    width: 100%;
+    padding: 5px 15px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+    outline: none;
+    cursor: pointer;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 15px;
+    color: var(--blue);
+    font-weight: 500;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.bannerBooking .bookingLayer .boxWrapper {
+    background-color: var(--blue);
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.9rem;
+}
+
+.bannerBooking .bookingLayer .boxWrapper:hover {
+    background-color: var(--yellow);
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+}
+
+.boxWrapper .searchText {
+    color: var(--white);
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+
+/**********WHY CHOOSE US**********/
+.chooseUs .ChooseUS {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.8rem;
+}
+
+.chooseUs .InfoData {
+    text-align: center;
+    font-weight: 600;
+}
+
+/********ABOUT US*******/
+.AboutUs {
+    background-color: var(--lightgrey);
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.AboutUs .aboutuslogo {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.AboutUs .aboutuslogo .outerWrapperlogo::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    background-color: hsla(0, 0%, 100%, .3);
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.AboutUs .aboutTextHead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: var(--blue);
+}
+
+.AboutUs .aboutTextCont {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.AboutUs .infoTaskData {
+    padding-top: 2rem;
+}
+
+.AboutUs .infoTaskData .boxOuterWrappers {
+    background-color: var(--white);
+    font-weight: 600;
+    padding: 1.6rem;
+    border-radius: 50%;
+    height: 100%;
+}
+
+.AboutUs .infoTaskData .boxOuterWrappers .iconLogo {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.AboutUs .infoTaskData .subtextHead {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.AboutUs .infoTaskData .subtextCont {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grey);
 }
