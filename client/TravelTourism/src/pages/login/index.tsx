@@ -88,11 +88,11 @@ const Login = () => {
           });
           document.cookie = "token=" + response.data.token;
           notify();
-          navigate('/home');
+          navigate('/home', { replace: true });
           localStorage.setItem('token', response.data.token);
         }
       } catch (error) {
-        console.log('error', error.response ? error.response.data : error.message);
+        console.log('error', error);
         errorNotify();
       };
     }

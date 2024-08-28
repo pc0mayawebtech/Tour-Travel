@@ -87,7 +87,7 @@ const ResetPassword = () => {
                 notify();
                 navigate('/');
             } catch (error) {
-                console.error('Axios error:', error.response ? error.response.data : error.message);
+                console.error('Axios error:', error);
                 errorNotify();
             }
 
