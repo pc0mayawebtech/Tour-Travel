@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.journeybox {
+    background-color: var(--white);
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px #00000029;
+    cursor: pointer;
+}
+
+.journeybox .iconBackSide {
+    color: var(--blue);
+    background-color: rgba(0, 108, 228, .1);
+    transition: all .3s ease-in-out;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.4rem auto;
+}
+
+.journeybox:hover .iconBackSide {
+    background-color: var(--blue);
+    font-weight: 600;
+    color: var(--white);
+}
+
+.journeybox .totalNumber {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.journeybox .abtNumberInfo {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--grey);
+}

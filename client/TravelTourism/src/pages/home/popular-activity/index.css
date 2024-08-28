@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.leftBackWrapper {
+    background-color: var(--white);
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.leftBackWrapper .subInnerBackWrapper {
+    background-color: var(--lightgrey);
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.leftBackWrapper .subInnerBackWrapper.active {
+    background-color: var(--blue);
+    font-weight: 600;
+    color: var(--white);
+}
+
+.leftBackWrapper .subInnerBackWrapper .abtText {
+    font-size: 1.2rem;
+    margin-bottom: 0rem;
+}
+
+.rightBackWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.rightBackWrapper .resultLogo {
+    width: 100%;
+    height: 100dvh;
+    border-radius: 8px;
+}
+
+.rightBackWrapper .infoabtImage {
+    display: inline-block;
+    position: absolute;
+    background-color: var(--white);
+    font-weight: 600;
+    padding: 2rem;
+    bottom: 2.6rem;
+    left: 2rem;
+    border-radius: 8px;
+    max-width: 345px;
+}
+
+.rightBackWrapper .infoabtImage .underBoxData {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.7rem;
+}
+
+.underBoxCont {
+    font-size: 1rem;
+    color: var(--grey);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.rightBackWrapper .infoabtImage .innerSpeaker .speakerLogo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+}
+
+.rightBackWrapper .infoabtImage .innerSpeaker .speakerLogo:not(:first-child) {
+    margin-left: -20px;
+}

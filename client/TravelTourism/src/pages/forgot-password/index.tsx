@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import './index.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
@@ -22,7 +25,17 @@ const ForgotPassword = () => {
         });
     };
 
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+        const notify = () => toast.success('Please check your email', {
+            position: "top-right",
+            autoClose: 5000,
+            pauseOnHover: true,
+        });
+        const errorNotify = () => toast.error('something is wrong', {
+            position: "top-right",
+            autoClose: 5000,
+            pauseOnHover: true,
+        });
         e.preventDefault();
         const { email } = inputval;
         const errors = {
@@ -40,14 +53,29 @@ const ForgotPassword = () => {
 
 
         if (!hasErrors) {
-            console.log(`Password reset link sent to ${email}`);
-            setInputVal({
-                email: '',
-                error: {
+            try {
+                const response = await axios.post('http://localhost:3000/forgotpassword', {
+                    email: email,
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                });
+                console.log(response.data);
+                console.log(`Password reset link sent to ${email}`);
+                setInputVal({
                     email: '',
-                },
-            })
-            navigate('/login');
+                    error: {
+                        email: '',
+                    },
+                });
+                notify();
+                navigate('/');
+            } catch (error) {
+                console.log('error', error)
+                errorNotify();
+            }
+
         } else {
             console.log("object")
             setInputVal((prevalue) => {
@@ -75,6 +103,7 @@ const ForgotPassword = () => {
                     <span style={{ fontSize: "1rem", color: "red", marginBottom: "0.9rem", marginTop: "-0.9rem", textAlign: "left", display: "block" }}>{inputval.error.email}</span>
                     <button type='submit' className="button">Submit</button>
                 </form>
+                <ToastContainer />
             </div>
         </div>
     );

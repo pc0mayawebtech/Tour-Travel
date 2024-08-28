@@ -12,7 +12,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-.login-box {
+.sign-box {
   background: linear-gradient(135deg, #74ebd5, #ACB6E5);
   padding: 20px;
   border-radius: 15px;
@@ -23,13 +23,13 @@
   position: relative;
 }
 
-.login-box h2 {
+.sign-box h2 {
   margin-bottom: 20px;
   font-size: 24px;
   color: #fff;
 }
 
-.login-box input {
+.sign-box input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
@@ -41,11 +41,11 @@
   transition: background-color 0.3s;
 }
 
-.login-box input:focus {
+.sign-box input:focus {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.login-box button {
+.sign-box .btnSign {
   width: 100%;
   padding: 12px;
   border-radius: 30px;
@@ -57,23 +57,23 @@
   transition: background-color 0.3s;
 }
 
-.login-box button:hover {
+.sign-box button:hover {
   background-color: #0071a1;
 }
 
-.login-box p {
+.sign-box p {
   margin-top: 20px;
   color: #fff;
   font-size: 14px;
 }
 
-.login-box p .linkingtext {
+.sign-box p .linkingtext {
   color: #ffefba;
   text-decoration: none;
   font-weight: 500;
 }
 
-.login-box p .linkingtext:hover {
+.sign-box p .linkingtext:hover {
   text-decoration: underline;
   color: #0071a1;
   font-weight: 500;
@@ -97,18 +97,27 @@
   font-weight: 500;
 }
 
+.sign-box .formError {
+  color: var(--red);
+  font-weight: 500;
+  display: block;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
 /* Responsive Styles for Tablets */
 @media (max-width: 768px) {
-  .login-box {
+  .sign-box {
     padding: 20px;
     max-width: 80%;
   }
 
-  .login-box h2 {
+  .sign-box h2 {
     font-size: 22px;
   }
 
-  .login-box input, .login-box button {
+  .sign-box input,
+  .sign-box button {
     padding: 12px;
     font-size: 15px;
   }
@@ -120,16 +129,17 @@
 
 /* Responsive Styles for Mobile Devices */
 @media (max-width: 600px) {
-  .login-box {
+  .sign-box {
     padding: 15px;
     max-width: 90%;
   }
 
-  .login-box h2 {
+  .sign-box h2 {
     font-size: 20px;
   }
 
-  .login-box input, .login-box button {
+  .sign-box input,
+  .sign-box button {
     padding: 10px;
     font-size: 14px;
   }
@@ -140,16 +150,17 @@
 }
 
 @media (max-width: 400px) {
-  .login-box {
+  .sign-box {
     padding: 10px;
     max-width: 95%;
   }
 
-  .login-box h2 {
+  .sign-box h2 {
     font-size: 18px;
   }
 
-  .login-box input, .login-box button {
+  .sign-box input,
+  .sign-box button {
     padding: 8px;
     font-size: 12px;
   }
