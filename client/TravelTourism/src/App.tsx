@@ -7,6 +7,8 @@ import Signin from "./pages/signup"
 import { Route, Routes } from "react-router-dom"
 import Protected from "./utils/protected"
 import Contact from "./pages/contactus"
+import CouponsAndDeals from "./pages/couponsAndDeals"
+
 
 const App = () => {
   return (
@@ -17,11 +19,9 @@ const App = () => {
         <Route path="/signup" element={<Signin />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/resetpassword/:id/:token" element={<ResetPassword />} />
-<<<<<<< Updated upstream
         <Route path="/contact" element={<Protected Component={Contact} />} />
-=======
-        <Route path="/activities" element={<Activity/>}/>
->>>>>>> Stashed changes
+        <Route path="/activities" element={<Activity />} />
+        <Route path="/couponsAndDeals" element={<CouponsAndDeals />} />
       </Routes>
 
     </>

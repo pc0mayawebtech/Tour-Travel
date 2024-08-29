@@ -30,7 +30,7 @@ const Header = () => {
                                     }
                                 </li>
                                 <li><Link to="/activities" className='linkMenu'>Activities</Link></li>
-                                <li><Link to="/" className='linkMenu'>Coupons & Deals</Link></li>
+                                <li><Link to="/couponsandDeals" className='linkMenu'>Coupons & Deals</Link></li>
                                 <li><Link to="/" className='linkMenu'>eSim</Link></li>
                                 <li><Link to="/" className='linkMenu'>Travel Guides </Link></li>
                             </ul>
