@@ -15,7 +15,7 @@ const Header = () => {
                         </label>
                         <nav className='innerMenuList'>
                             <ul>
-                                <li><Link to="/" className='linkMenu'>Flight + Hotel</Link></li>
+                                <li><Link to="/" className='linkMenu'>Flights + Hotel</Link></li>
                                 <li><Link to="/" className='linkMenu'>Hotels + Homes</Link></li>
                                 <li><Link to='' className='linkMenu' onClick={() => setIsView(!isView)}>Transport {isView === false ? <ChevronUp /> : <ChevronDown />}</Link>
                                     {
@@ -29,8 +29,8 @@ const Header = () => {
                                         </ul>
                                     }
                                 </li>
-                                <li><Link to="/" className='linkMenu'>Activities</Link></li>
-                                <li><Link to="/" className='linkMenu'>Coupans & Deals</Link></li>
+                                <li><Link to="/activities" className='linkMenu'>Activities</Link></li>
+                                <li><Link to="/" className='linkMenu'>Coupons & Deals</Link></li>
                                 <li><Link to="/" className='linkMenu'>eSim</Link></li>
                                 <li><Link to="/" className='linkMenu'>Travel Guides </Link></li>
                             </ul>
