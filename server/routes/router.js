@@ -1,5 +1,6 @@
 import express from 'express';
 import userdb from '../models/userSchema.js';
+import userdb2 from '../models/userContactSchema.js';
 import nodemailer from 'nodemailer';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
@@ -155,6 +156,25 @@ router.post('/resetpassword/:id/:token', async (req, res) => {
         console.log('error', error.message);
         return res.status(400).send({ error: 'Internal server error' });
     }
+});
+
+
+//Contact Page API
+router.post('/contact', async (req, res) => {
+    const { name, email, tour, message } = req.body;
+    if (!name || !email || !tour || !message) {
+        return res.status(400).json({ error: "Please fill the field" });
+    }
+
+    try {
+        const finaluser = new userdb2({ name, email, tour, message });
+        const storeData = await finaluser.save();
+        return res.status(200).json({ message: "data saved successfully", status: 200, storeData });
+    } catch (error) {
+        console.log("contect error", error);
+        return res.status(500).json({ "error": "internal server error" });
+    }
 })
+
 
 export default router;

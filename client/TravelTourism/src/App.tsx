@@ -17,11 +17,8 @@ const App = () => {
         <Route path="/signup" element={<Signin />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/resetpassword/:id/:token" element={<ResetPassword />} />
-<<<<<<< Updated upstream
         <Route path="/contact" element={<Protected Component={Contact} />} />
-=======
-        <Route path="/activities" element={<Activity/>}/>
->>>>>>> Stashed changes
+        <Route path="/activities" element={<Activity />} />
       </Routes>
 
     </>

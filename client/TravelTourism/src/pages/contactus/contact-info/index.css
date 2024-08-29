@@ -50,3 +50,8 @@
     text-align: center;
     display: block;
 }
+
+.outerWrapper .subInnerInfoText:hover {
+    color: var(--blue);
+    font-weight: 400;
+}

@@ -15,7 +15,7 @@ const Header = () => {
                         </label>
                         <nav className='innerMenuList'>
                             <ul>
-                                <li><Link to="/" className='linkMenu'>Flights + Hotel</Link></li>
+                                <li><Link to="/flighthotel" className='linkMenu'>Flights + Hotel</Link></li>
                                 <li><Link to="/" className='linkMenu'>Hotels + Homes</Link></li>
                                 <li><Link to='' className='linkMenu' onClick={() => setIsView(!isView)}>Transport {isView === false ? <ChevronUp /> : <ChevronDown />}</Link>
                                     {
@@ -23,16 +23,11 @@ const Header = () => {
                                             <li><Link to="/" className='subMenuLink'>Flights</Link></li>
                                             <li><Link to="/" className='subMenuLink'>Buses</Link></li>
                                             <li><Link to="/" className='subMenuLink'>Trains</Link></li>
-                                            <li><Link to="/" className='subMenuLink'>Ferries</Link></li>
-                                            <li><Link to="/" className='subMenuLink'>Airport transfer</Link></li>
-                                            <li><Link to="/" className='subMenuLink'>Car rentals</Link></li>
                                         </ul>
                                     }
                                 </li>
                                 <li><Link to="/activities" className='linkMenu'>Activities</Link></li>
                                 <li><Link to="/" className='linkMenu'>Coupons & Deals</Link></li>
-                                <li><Link to="/" className='linkMenu'>eSim</Link></li>
-                                <li><Link to="/" className='linkMenu'>Travel Guides </Link></li>
                             </ul>
                         </nav>
                         <div className='createAccount'>
