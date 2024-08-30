@@ -1,4 +1,5 @@
 import Flighthotel from "./pages/Flighthotel"
+import { Activity } from "./pages/activities"
 import ForgotPassword from "./pages/forgot-password"
 import Home from "./pages/home"
 import Login from "./pages/login"
@@ -7,6 +8,9 @@ import Signin from "./pages/signup"
 import { Route, Routes } from "react-router-dom"
 import Protected from "./utils/protected"
 import Flighthome from "./pages/Flighthome"
+import Contact from "./pages/contactus"
+import CouponsAndDeals from "./pages/couponsAndDeals"
+
 
 const App = () => {
   return (
@@ -19,6 +23,9 @@ const App = () => {
         <Route path="/resetpassword/:id/:token" element={<ResetPassword />} />
         <Route path="/flighthotel" element={<Flighthotel/>}/>
         <Route path="/flighthome" element={<Flighthome/>}/>
+        <Route path="/contact" element={<Protected Component={Contact} />} />
+        <Route path="/activities" element={<Activity />} />
+        <Route path="/couponsAndDeals" element={<CouponsAndDeals />} />
       </Routes>
 
     </>

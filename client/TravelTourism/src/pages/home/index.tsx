@@ -42,7 +42,7 @@ const Home = () => {
             <div className='bannerBooking'>
                <div className="container">
                   <div className="row justify-content-center">
-                     <div className="col-xxl-8 col-xl-10 col-lg-11">
+                     <div className="col-xxl-9 col-xl-10 col-lg-11">
                         <div className='bookingLayer'>
                            <div className="row">
                               <div className="col-lg-3">

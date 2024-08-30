@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import validator from "validator";
 
-const userSchema = new mongoose.Schema({
+const userContactSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -18,14 +18,18 @@ const userSchema = new mongoose.Schema({
         },
         unique: true,
     },
-    password: {
+    tour: {
         type: String,
         required: true,
         trim: true,
-        unique: true,
+    },
+    message: {
+        type: String,
+        required: true,
+        trim: true,
     },
 });
 
 
-const userdb = new mongoose.model("auth", userSchema);
-export default userdb;
+const userdb2 = new mongoose.model("contact", userContactSchema);
+export default userdb2;

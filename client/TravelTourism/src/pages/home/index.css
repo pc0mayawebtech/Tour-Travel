@@ -445,3 +445,9 @@ body {
     font-weight: 500;
     color: var(--grey);
 }
+
+@media(max-width:1440px){
+    .Testinomial{
+        height: 90dvh;
+    }
+}

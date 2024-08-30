@@ -17,22 +17,19 @@ const Header = () => {
                             <ul>
                                 <li><Link to="/flighthotel" className='linkMenu'>Flight + Hotel</Link></li>
                                 <li><Link to="/flighthome" className='linkMenu'>Hotels + Homes</Link></li>
+                                <li><Link to="/flighthotel" className='linkMenu'>Flights + Hotel</Link></li>
+                                <li><Link to="/" className='linkMenu'>Hotels + Homes</Link></li>
                                 <li><Link to='' className='linkMenu' onClick={() => setIsView(!isView)}>Transport {isView === false ? <ChevronUp /> : <ChevronDown />}</Link>
                                     {
                                         isView && <ul>
                                             <li><Link to="/" className='subMenuLink'>Flights</Link></li>
                                             <li><Link to="/" className='subMenuLink'>Buses</Link></li>
                                             <li><Link to="/" className='subMenuLink'>Trains</Link></li>
-                                            <li><Link to="/" className='subMenuLink'>Ferries</Link></li>
-                                            <li><Link to="/" className='subMenuLink'>Airport transfer</Link></li>
-                                            <li><Link to="/" className='subMenuLink'>Car rentals</Link></li>
                                         </ul>
                                     }
                                 </li>
-                                <li><Link to="/" className='linkMenu'>Activities</Link></li>
-                                <li><Link to="/" className='linkMenu'>Coupans & Deals</Link></li>
-                                <li><Link to="/" className='linkMenu'>eSim</Link></li>
-                                <li><Link to="/" className='linkMenu'>Travel Guides </Link></li>
+                                <li><Link to="/activities" className='linkMenu'>Activities</Link></li>
+                                <li><Link to="/" className='linkMenu'>Coupons & Deals</Link></li>
                             </ul>
                         </nav>
                         <div className='createAccount'>
