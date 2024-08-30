@@ -1,0 +1,73 @@
+.featureHomeSubHeading{
+    text-align: center;
+}
+.featureHomeSubHeading ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.non-active{
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.featureHomeTileContent{
+    height: 350px;
+    margin-bottom: 3%;
+}
+.featureHomeTileImage{
+    height: 200px;
+    width: 100%;
+}
+.featureHomeTileImage img{
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+}
+.featureTileContent{
+    padding: 10px;
+}
+.hotelName{
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 2%;
+}
+.location {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5392F9;
+    margin-bottom: 2%;
+}
+.icon{
+    color:  #5392F9;
+}
+.time{
+    font-size: 12px;
+    color: #737373;
+    margin-bottom: 2%;
+}
+.price{
+   color: red;
+   font-size: 19px;
+}
+.active{
+    border-bottom: 2px solid #5392F9;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 19px;
+    font-weight: 400;
+}
+.featureHomeButton{
+    text-align: center;
+}
+.featureHomeButton button{
+    background-color: #5392F9;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 30px;
+    border: none;
+    font-weight: 500;
+}

@@ -15,8 +15,8 @@ const Header = () => {
                         </label>
                         <nav className='innerMenuList'>
                             <ul>
-                                <li><Link to="/" className='linkMenu'>Flight + Hotel</Link></li>
-                                <li><Link to="/" className='linkMenu'>Hotels + Homes</Link></li>
+                                <li><Link to="/flighthotel" className='linkMenu'>Flight + Hotel</Link></li>
+                                <li><Link to="/flighthome" className='linkMenu'>Hotels + Homes</Link></li>
                                 <li><Link to='' className='linkMenu' onClick={() => setIsView(!isView)}>Transport {isView === false ? <ChevronUp /> : <ChevronDown />}</Link>
                                     {
                                         isView && <ul>

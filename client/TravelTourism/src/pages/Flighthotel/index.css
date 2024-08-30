@@ -1,0 +1,77 @@
+.flightHotelBanner{
+    background-image: url('../../public/Images/hotelhome.png');
+    height: 300px;
+    background-size: cover;
+}
+.topDestinationHeading p{
+    font-size: 30px;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-weight: 700;
+}
+
+.topDestination{
+    padding: 20px 80px;
+}
+
+/* --Promotion Accomodation--- */
+.promotion{
+    padding: 20px 80px;
+}
+.promotionheading{
+    text-align: center;
+    margin-top: 3%;
+}
+.promotionheading p{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+
+/* ---flight promotion--- */
+.flightPromotion,.featureHome,.review,.destinationOutside{
+    padding: 20px 80px;
+
+}
+.flightPromotionHeading{
+    text-align: center;
+    margin-top: 3%;
+}
+.flightPromotionHeading p{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+/* ---feature home--- */
+.featureHomeHeading{
+    text-align: center;
+    margin-top: 3%;
+}
+.featureHomeHeading p{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
+/* --revieww----- */
+.reviewHeading{
+    text-align: center;
+}
+.reviewHeading p{
+    font-size: 30px;
+    font-weight: 700;
+}
+.reviewContent{
+    margin-top: 2%;
+}
+
+/*--- outside destination---- */
+.destinationOutsideHeading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+.destinationOutside{
+    margin-bottom: 3%;
+}

@@ -1,0 +1,33 @@
+.topDestinationSlide{
+    height: 280px;
+}
+.topDestinationImage{
+    height: 230px;
+}
+.topDestinationImage img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-radius: 10px;
+}
+.destinationContent{
+    margin-top: 2%;
+    text-align: center;
+}
+.destinationContent p{
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.destinationContent label{
+    color: #000;
+    font-weight: 500;
+}
+.swiper-button-prev{
+    /* margin-top: -3%; */
+    padding: 1.2rem !important;
+}
+.swiper-button-next{
+    /* margin-top: -3%; */
+    padding: 1.2rem !important;
+}
