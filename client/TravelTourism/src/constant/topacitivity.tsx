@@ -1,4 +1,3 @@
-
 const ActivitiesArray = [
     {
         id:"a",
@@ -35,7 +34,7 @@ const ActivitiesArray = [
     {
         id:"e",
         image: "https://res.cloudinary.com/dixfg1bvv/image/upload/v1724907866/jpg_eejnz1.jpg",
-        detail: "India network card｜1/3/5/10GB total eSIM",
+        detail: "India network card｜ 1/3/5/10GB total eSIM",
         ratings: 3.6,
         review: 60,
         price: "₹400",

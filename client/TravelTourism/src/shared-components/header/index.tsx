@@ -1,10 +1,18 @@
 import './index.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 
 const Header = () => {
     const [isView, setIsView] = useState(false);
+   
+    const navigate= useNavigate();
+    
+    const handleLogOut=()=>{
+       localStorage.removeItem("token")
+        navigate("/login",  { replace: true })
+    }
+    
     return (
         <>
             <header className='outerBox'>
@@ -17,8 +25,6 @@ const Header = () => {
                             <ul>
                                 <li><Link to="/flighthotel" className='linkMenu'>Flight + Hotel</Link></li>
                                 <li><Link to="/flighthome" className='linkMenu'>Hotels + Homes</Link></li>
-                                <li><Link to="/flighthotel" className='linkMenu'>Flights + Hotel</Link></li>
-                                <li><Link to="/" className='linkMenu'>Hotels + Homes</Link></li>
                                 <li><Link to='' className='linkMenu' onClick={() => setIsView(!isView)}>Transport {isView === false ? <ChevronUp /> : <ChevronDown />}</Link>
                                     {
                                         isView && <ul>
@@ -29,11 +35,13 @@ const Header = () => {
                                     }
                                 </li>
                                 <li><Link to="/activities" className='linkMenu'>Activities</Link></li>
-                                <li><Link to="/" className='linkMenu'>Coupons & Deals</Link></li>
+                                <li><Link to="/couponsAndDeals" className='linkMenu'>Coupons & Deals</Link></li>
                             </ul>
                         </nav>
                         <div className='createAccount'>
-                            <span><Link to="/" className='user1'>Log In</Link></span>
+                            <span><Link to="/login" className='user1'>Log In</Link></span>
+                            <span className='user1' onClick={handleLogOut}>Log Out</span>
+
                             <span><Link to="/signup" className='user2'>Create account</Link></span>
                         </div>
                     </div>

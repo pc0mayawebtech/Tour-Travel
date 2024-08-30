@@ -1,9 +1,9 @@
-import "./index.css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import 'swiper/css/navigation';
 import ActivitiesArray from "../../../constant/topacitivity";
 import { FaStar } from "react-icons/fa";
+import "./index.css"
 import 'swiper/css';
 
 
@@ -13,7 +13,7 @@ const Index = () => {
             <Swiper
                 slidesPerView={3}
                 spaceBetween={100}
-                navigation={false}
+                navigation={true}
                 autoplay={{ delay: 3000, disableOnInteraction: true }}
                 modules={[Navigation, Autoplay]}
                 onSlideChange={() => console.log('slide change')}
@@ -47,7 +47,7 @@ const Index = () => {
                 {ActivitiesArray.map((item, id) => (
                     <SwiperSlide key={id}>
                         <div className=" tourLocations" >
-                            <div className="locationActivity">
+                            <div className="activityImage">
                                 <img src={item.image} />
                             </div>
                             <div>

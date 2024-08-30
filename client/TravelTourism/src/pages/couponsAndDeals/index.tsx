@@ -1,13 +1,27 @@
+import "./index.css"
 import { useNavigate } from "react-router-dom";
 import Coupons from "../../constant/coupons&deals";
 import Footer from "../../shared-components/footer";
 import Header from "../../shared-components/header";
-import "./index.css"
+import Promotionslick from "../Flighthotel/PromotionSlick";
+import Flightpromotion from "../Flighthotel/flightPromotion";
+import { useState } from "react";
 
 const CouponsAndDeals = () => {
+    const [offers, setOffers] = useState(Coupons.slice(0, 5));
+    const [showMoreBtn, setShowMoreBtn] = useState(true)
+
     const navigate = useNavigate()
     const handleClaim = () => {
-        navigate('/flights')
+        navigate('/flighthome')
+    }
+    const handleShowMore = () => {
+        setOffers(Coupons)
+        setShowMoreBtn(!showMoreBtn)
+    }
+    const handleShowLess = () => {
+        setOffers(Coupons.slice(0, 5))
+        setShowMoreBtn(!showMoreBtn)
     }
     return (
         <>
@@ -18,12 +32,32 @@ const CouponsAndDeals = () => {
             </div>
             <div className="container">
                 <div className="row">
+                    <div className="accommodationCoupon">
+                        <h3>Accommodation Coupons and Deals</h3>
+                    </div>
+                    <div className="accommodationCouponSlider">
+                        <Promotionslick />
+                    </div>
 
-
+                    <div className="flightCoupons">
+                        <h3> Flight Coupons and Deals</h3>
+                    </div>
+                    <div className="flightCouponSlider">
+                        <Flightpromotion />
+                    </div>
+                </div>
+                <div className="amazingDeals">
+                    <h3>
+                        More Amazing Deals
+                    </h3>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row amazingCoupons">
                     {
-                        Coupons.map((item, id) => {
+                        offers.map((item, id) => {
                             return (
-                                <div className="col-md-3 todaysCoupons" key={id}>
+                                <div className="col-lg-2 col-md-12 col-sm-12 col-12 todaysCoupons" key={id}>
                                     <div className="">
                                         <img src={item.image} />
                                     </div>
@@ -36,8 +70,12 @@ const CouponsAndDeals = () => {
                             )
                         })
                     }
-
                 </div>
+                <div className="showMore">
+                    {showMoreBtn ? <button className="showMoreBtn" onClick={handleShowMore}> Show More </button> :
+                        <button className="showMoreBtn" onClick={handleShowLess}>Show Less</button>}
+                </div>
+
             </div>
             <hr />
             <div className="container">

@@ -88,7 +88,7 @@ const Login = () => {
           });
           document.cookie = "token=" + response.data.token;
           notify();
-          navigate('/home', { replace: true });
+          navigate('/', { replace: true });
           localStorage.setItem('token', response.data.token);
         }
       } catch (error) {
