@@ -1,0 +1,105 @@
+.trainBanner{
+    background-image: url('../../../public/Images/Train/trainbanner.jpg');
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+}
+.whereToGoHeading{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 3%;
+}
+.whereToGoTile{
+    height: 350px;
+    box-shadow:  rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 3%;
+}
+.whereToGoImage{
+    height: 80%;
+    width: 100%;
+}
+.whereToGoImage img{
+    border-radius: 10px 10px 0px 0px;
+    height: 100%;
+    width: 100%;
+}
+.whereToGoText{
+   padding: 10px;
+   font-weight: 600;
+}
+.whereToGoText .place{
+    margin-bottom: 1%;
+}
+
+/* ---popular routes ----  */
+.popularRoutesContent{
+    display: flex;
+    justify-content: space-between;
+}
+.popularRoutes{
+    margin-top: 3%;
+    margin-bottom: 2%;
+    box-shadow:  rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+     padding: 10px;
+    background-color: var(--white);
+    min-height: 300px;
+}
+.popularRoutes p{
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--blue);
+    margin-bottom: 0;
+}
+ .underline{
+    margin-bottom: 2%;
+    height: 2px;
+    background-color: var(--blue);
+    width: 100%;
+    color: var(--blue);
+}
+
+.popularRoutesContent{
+    padding: 20px;
+}
+.popularRoutesLi{
+    line-height: 2.3rem;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--darkgray);
+    transition: text-decoration 0.3s ease;
+}
+.popularRoutesLi:hover{
+    text-decoration: underline;
+    
+}
+
+@media (max-width: 1200px) {
+    .popularRoutesLi {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 992px) {
+    .popularRoutesLi {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .popularRoutesContent{
+        display:inline;
+    }
+    .popularRoutesLi {
+        font-size: 16px; 
+        line-height: 2rem; 
+    }
+}
+@media (max-width: 576px) {
+    .popularRoutesContent{
+        display:inline;
+    }
+    .popularRoutesLi {
+        font-size: 16px; 
+        line-height: 1.8rem; 
+    }
+}

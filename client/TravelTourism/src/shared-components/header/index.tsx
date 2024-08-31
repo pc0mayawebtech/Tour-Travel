@@ -19,18 +19,18 @@ const Header = () => {
                 <div className="container-fluid">
                     <div className='InnerOuterWrapper'>
                         <label className='logo'>
-                            <span>agoda</span>
+                            <span><Link to={'/home'}>agoda</Link></span>
                         </label>
                         <nav className='innerMenuList'>
                             <ul>
                                 <li><Link to="/flighthotel" className='linkMenu'>Flight + Hotel</Link></li>
                                 <li><Link to="/flighthome" className='linkMenu'>Hotels + Homes</Link></li>
-                                <li><Link to='' className='linkMenu' onClick={() => setIsView(!isView)}>Transport {isView === false ? <ChevronUp /> : <ChevronDown />}</Link>
+                                <li><Link to='' className='linkMenu' onClick={() => setIsView(!isView)}>Transport {isView === false ? <ChevronDown /> : <ChevronUp />}</Link>
                                     {
                                         isView && <ul>
                                             <li><Link to="/" className='subMenuLink'>Flights</Link></li>
                                             <li><Link to="/" className='subMenuLink'>Buses</Link></li>
-                                            <li><Link to="/" className='subMenuLink'>Trains</Link></li>
+                                            <li><Link to="/train" className='subMenuLink'>Trains</Link></li>
                                         </ul>
                                     }
                                 </li>

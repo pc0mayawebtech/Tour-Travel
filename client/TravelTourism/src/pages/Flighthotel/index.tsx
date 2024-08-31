@@ -30,7 +30,6 @@ const Flighthotel = () => {
       <Header />
       <div className="flightHotelBanner"></div>
       <section className="HomeBanner mb-5">
-        {/* <SliderCarousal /> */}
         <div className="bannerBooking">
           <div className="container">
             <div className="row justify-content-center">
@@ -165,6 +164,7 @@ const Flighthotel = () => {
           </div>
         </div>
       </section>
+      
       <div className="topDestination container">
         <div className="topDestinationHeading">
           <p>Top Destinations in India</p>

@@ -13,9 +13,15 @@ import CouponsAndDeals from "./pages/couponsAndDeals"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AirLines from "./pages/airlines company"
+import About from "./pages/Aboutus"
+import Train from "./pages/Train"
 
 
 const App = () => {
+// js -> in 
+// get path -> router
+
+
   return (
     <>
       <Routes>
@@ -30,6 +36,9 @@ const App = () => {
         <Route path="/activities" element={<Activity />} />
         <Route path="/couponsAndDeals" element={<CouponsAndDeals />} />
         <Route path ="/airlines" element ={<AirLines/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/train" element={<Train/>}/>
+
       </Routes>
       <ToastContainer />
     </>

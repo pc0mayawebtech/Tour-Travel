@@ -22,7 +22,7 @@ const Footer = () => {
                         <div>
                             <h3 className='mainHead'>Company</h3>
                             <ul>
-                                <li><Link to="/" className='footInfoLink'>About Us</Link></li>
+                                <li><Link to="/about" className='footInfoLink'>About Us</Link></li>
                                 <li><Link to="/" className='footInfoLink'>Careers</Link></li>
                                 <li><Link to="/" className='footInfoLink'>Travel Guides</Link></li>
                                 <li><Link to="/" className='footInfoLink'>Traveler Reviews</Link></li>

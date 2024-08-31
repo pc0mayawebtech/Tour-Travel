@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.about{
+    background-color: #F1F7F6;
+}
+#videoBanner{
+    width: 100%;
+    height: 400px;
+    border-radius: 0px 0px 30px 30px;
+    object-fit: cover;
+    z-index: 99;
+}
+.aboutBanner h1{
+    font-family: "Rubik", sans-serif;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 3.5rem; 
+    font-weight: 500;
+    text-align: center;
+    z-index: 1; 
+}
+.aboutBanner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+.aboutUsContent {
+    padding: 0px 80px;
+    position: relative;
+    top: -150px !important;
+}
+.aboutContent{
+    z-index: 9;
+    background-color: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 50px;
+    border-radius: 10px;
+}
+.aboutContentHeading{
+    font-weight: 600;
+}
+.aboutContent p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #767676;
+    padding: 10px;
+}
+.aboutContentText{
+    color: black !important;
+    margin-bottom: 0;
+}
+.aboutContentList{
+    line-height: 2rem;
+}
+.inNumber{
+    margin-top: -5%;
+    padding: 0px 80px;
+    margin-bottom: 5%;
+}
+.inNumberHeading p{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 2%;
+
+}
+.inNumberTile{
+    background-color: var(--white);
+    height: 230px;
+    color: #444343; 
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+padding: 20px;
+transition: all 0.3s ease;
+}
+.inNumberTile:hover{
+    background-color:  rgb(51, 158, 172);
+    color: var(--white);
+}
+.inNumberTile:hover h1{
+    border-bottom: 1px solid var(--white);
+}
+.inNumberTile h1{
+    text-align: center;
+    padding: 30px;
+    border-bottom: 1px solid #767676;
+}
+
+.inNumberTile p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.swiper{
+    padding: 20px;
+}
+
+/* --little more about us--- */
+
+.aboutLittleMore{
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 170px;
+    margin-bottom: 5%;
+}
+.aboutLittleMoreTile{
+    color: var(--white);
+    border-radius: 15px;
+    height: 400px;
+    width: 450px;
+    background-color: rgb(51, 158, 172);
+    background-size: contain;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-repeat: no-repeat;
+    margin-bottom: 6%;
+
+}
+.aboutLittleMoreHeading{
+    padding: 30px 80px 80px 10px;
+}
+
+.aboutLittleMoreHeading h3{
+    font-weight: 700;
+}
+.aboutLittleMoreTileQues{
+    font-size: 15px;
+}
+
+ 
+.aboutLittleMoreTileQues{
+    font-size: 17px;
+}
+.aboutLittleMoreTileAnswer{
+    font-size: 23px;
+    font-weight: 600;
+}
+.aboutLittleMoreTileReadMore{
+    font-size: 17px;
+    margin-bottom: 0 ;
+    font-weight: 600;
+}
+.aboutLittleMoreTileReadMore:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.aboutLittleMoreTileContent{
+    padding: 30px;
+}
