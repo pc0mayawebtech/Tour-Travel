@@ -1,8 +1,7 @@
 import './index.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -120,7 +119,7 @@ const Login = () => {
           <button type="submit" className='logbtn'>Log In</button>
           <p>Don't have an account? <Link to="/signup" className='linkingtext'>Sign Up</Link></p>
         </form>
-        <ToastContainer />
+
       </div>
     </div>
   );

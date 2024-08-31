@@ -2,8 +2,7 @@ import { useState } from 'react';
 import './index.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 const ForgotPassword = () => {
     const navigate = useNavigate();
@@ -103,7 +102,6 @@ const ForgotPassword = () => {
                     <span style={{ fontSize: "1rem", color: "red", marginBottom: "0.9rem", marginTop: "-0.9rem", textAlign: "left", display: "block" }}>{inputval.error.email}</span>
                     <button type='submit' className="button">Submit</button>
                 </form>
-                <ToastContainer />
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ const Protected = ({ Component }: { Component: FC }) => {
         if (!token) {
             navigate('/login', { replace: true });
         }
-    });
+    }, [navigate]);
     return (
         <div>
             <Component />

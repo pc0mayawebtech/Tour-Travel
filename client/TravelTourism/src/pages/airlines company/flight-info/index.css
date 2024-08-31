@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.backWrapper {
+    background-color: var(--white);
+    font-weight: 600;
+    padding: 1.5rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #00000029;
+    border-radius: 8px;
+}
+
+.backWrapper .flightOuterWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.backWrapper .flightOuterWrapper .flightname {
+    font-size: var(--black);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.backWrapper .flightOuterWrapper .flightTime {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 0rem;
+}
+
+.backWrapper .flightOuterWrapper .flightDest {
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0rem;
+    text-align: center;
+}
+
+.backWrapper .flightOuterWrapper .timeDuration {
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+}
+
+.backWrapper .flightOuterWrapper .symbol {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--red);
+}
+
+.backWrapper .flightOuterWrapper .totalAmount {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--red);
+}

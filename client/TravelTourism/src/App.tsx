@@ -10,6 +10,9 @@ import Protected from "./utils/protected"
 import Flighthome from "./pages/Flighthome"
 import Contact from "./pages/contactus"
 import CouponsAndDeals from "./pages/couponsAndDeals"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AirLines from "./pages/airlines company"
 
 
 const App = () => {
@@ -26,8 +29,9 @@ const App = () => {
         <Route path="/contact" element={<Protected Component={Contact} />} />
         <Route path="/activities" element={<Activity />} />
         <Route path="/couponsAndDeals" element={<CouponsAndDeals />} />
+        <Route path ="/airlines" element ={<AirLines/>}/>
       </Routes>
-
+      <ToastContainer />
     </>
   )
 }

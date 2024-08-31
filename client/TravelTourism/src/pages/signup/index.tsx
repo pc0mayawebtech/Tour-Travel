@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import './index.css';
 import { Link } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 function Login() {
@@ -91,7 +90,7 @@ function Login() {
           navigate('/');
         }
       } catch (error) {
-        console.error('Error during signup:', error.response ? error.response.data : error.message);
+        console.error('Error during signup:', error);
         errorNotify();
       }
     }
@@ -114,7 +113,6 @@ function Login() {
           <button type="submit" className='btnSign mt-3'>Sign Up</button>
           <p>Already have an account? <Link to="/login" className='linkingtext'>LogIn</Link></p>
         </form>
-        <ToastContainer />
       </div>
     </div>
   );
