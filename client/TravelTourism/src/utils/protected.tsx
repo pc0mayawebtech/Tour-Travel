@@ -6,7 +6,7 @@ const Protected = ({ Component }: { Component: FC }) => {
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (!token) {
-            navigate('/', { replace: true });
+            navigate('/login', { replace: true });
         }
     });
     return (
