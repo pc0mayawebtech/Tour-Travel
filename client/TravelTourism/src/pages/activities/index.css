@@ -47,8 +47,8 @@
     width: 30%;
     border-radius: 10px;
     margin:22px;
-    padding: 10px ;
-    /* margin-bottom: 4rem; */
+    padding: 16px;
+    
 }
 /*  ****Discover More Place****  */
 
@@ -82,4 +82,16 @@
 }
 .outsideIndia h3{
     margin-bottom: 1rem;
+}
+@media only screen and (max-width: 1024px){
+    .whyChooseUs{
+        width: 28.7%;
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .whyChooseUs{
+        width: 27%;
+        padding: 10px;
+    }
 }

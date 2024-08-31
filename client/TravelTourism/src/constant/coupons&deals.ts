@@ -17,13 +17,13 @@ const Coupons = [
         id: 3,
         image: "https://res.cloudinary.com/dixfg1bvv/image/upload/v1724930242/blocklist-removal-web_gls5vh.png",
         offer: "Limited Time Price Drop ",
-        details: "Unlock special hotel rates at your dream destination.",
+        details: "Unlock special hotel rates at your dream destination",
         book:"Book Now",
     },
     {
         id: 4,
         image: "https://res.cloudinary.com/dixfg1bvv/image/upload/v1724930292/tat-aug2024-web_tfmcso.png",
-        offer: "Amazing Thailand",
+        offer: "Amazing Thailand-20% off",
         details: "Big discounts from Agoda and the Tourism Authority",
         book:"Book Now",
     },
@@ -52,14 +52,14 @@ const Coupons = [
         id: 8,
         image: "https://res.cloudinary.com/dixfg1bvv/image/upload/v1724930370/domestic-web_jcjkcl.png",
         offer: "Local Deals - Up to 25% off",
-        details: "Get special rates on local flights and hotels and resorts.",
+        details: "Get special rates on local flights and hotels and resorts! Save upto 25% ",
         book:"Book Now",
     }, 
     {
         id: 9,
         image: "https://res.cloudinary.com/dixfg1bvv/image/upload/v1724930363/Web_Deals_Page_More_Deals_o11ixh.png",
-        offer: "Continue browsing on our App!",
-        details: "Visit Agoda app to get access to all your deals, offers, and discounts",
+        offer: "Continue browsing on our App",
+        details: "Visit Agoda app to get access to all your deals, discounts",
         book:"Take Me There"
     },
 ]

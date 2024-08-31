@@ -39,7 +39,7 @@ const Header = () => {
                             </ul>
                         </nav>
                         <div className='createAccount'>
-                            <span><Link to="/login" className='user1'>Log In</Link></span>
+                            <span><Link to="/" className='user1'>Log In</Link></span>
                             <span className='user1' onClick={handleLogOut}>Log Out</span>
 
                             <span><Link to="/signup" className='user2'>Create account</Link></span>

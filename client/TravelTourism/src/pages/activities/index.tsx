@@ -36,7 +36,7 @@ export const Activity = () => {
               {ChooseUs.map((item, id) => {
                 return (
                   <div
-                    className="col-lg-4 col-md-12 col-sm-12 col-12 whyChooseUs"
+                    className="col-lg-3 col-md-12 col-sm-12 col-12 whyChooseUs"
                     key={id}
                   >
                     <div>

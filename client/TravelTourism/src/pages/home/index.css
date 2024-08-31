@@ -1,453 +1,457 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style-type: none;
 }
 
 body {
-    background: #fff !important;
+  background: #fff !important;
 }
 
 .HomeBanner {
-    position: relative;
+  position: relative;
 }
 
 .bannerBooking {
-    position: absolute;
-    bottom: 1.2rem;
-    width: 100%;
-    z-index: 9999;
+  position: absolute;
+  bottom: 1.2rem;
+  width: 100%;
+  z-index: 9999;
 }
 
 .bannerBooking .bookingLayer {
-    background-color: var(--white);
-    font-weight: 600;
-    box-shadow: 0 3px 6px #00000029;
-    border-radius: 10px;
-    padding: 1rem;
-    position: sticky;
-    height: 80px;
+  background-color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 3px 6px #00000029;
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  height: 80px;
 }
 
 .search-icon-bg .locateIcon {
-    display: flex;
-    width: 38px;
-    height: 38px;
-    background-color: var(--light);
-    border-radius: 50%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: var(--blue);
-    font-size: 20px;
+  display: flex;
+  width: 38px;
+  height: 38px;
+  background-color: var(--light);
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--blue);
+  font-size: 20px;
 }
 
 .banner-select {
-    margin-top: -10px;
+  margin-top: -10px;
 }
 
 .banner-select .innerTextInfo {
-    font-size: 1rem;
-    line-height: 1.625;
-    font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625;
+  font-weight: 500;
 }
 
 .banner-select .nice-select {
-    position: relative;
-    border: none;
-    padding-inline-start: 0;
-    color: var(--grey);
-    font-size: 1rem;
-    height: 0;
-    line-height: 0;
-    cursor: pointer;
-    font-weight: 400;
+  position: relative;
+  border: none;
+  padding-inline-start: 0;
+  color: var(--grey);
+  font-size: 1rem;
+  height: 0;
+  line-height: 0;
+  cursor: pointer;
+  font-weight: 400;
 }
 
 .banner-select .nice-select .countryList {
-    background-color: var(--white);
-    position: relative;
-    top: 0.8rem;
-    border-radius: 8px;
-    box-shadow: #cbcbcb 0 4px 8px 0;
-    padding-left: 1rem;
-    height: 28vh;
+  background-color: var(--white);
+  position: relative;
+  top: 0.8rem;
+  border-radius: 8px;
+  box-shadow: #cbcbcb 0 4px 8px 0;
+  padding-left: 1rem;
+  height: 28vh;
 }
 
 .banner-select .nice-select .countryList .option {
-    cursor: pointer;
-    line-height: 2.5;
-    list-style: none;
-    outline: none;
-    text-align: left;
-    transition: all .2s;
+  cursor: pointer;
+  line-height: 2.5;
+  list-style: none;
+  outline: none;
+  text-align: left;
+  transition: all 0.2s;
 }
 
 .banner-select .nice-select .countryList .option .countryVisitLink {
-    text-decoration: none;
-    color: var(--grey);
-    font-weight: 400;
-    text-align: left;
-    font-size: 1rem;
+  text-decoration: none;
+  color: var(--grey);
+  font-weight: 400;
+  text-align: left;
+  font-size: 1rem;
 }
 
 .banner-select .nice-select input {
-    border: none;
-    box-shadow: #cbcbcb 0 4px 8px 0;
-    border: 1px solid #cbcbcb;
-    padding: 0.1rem;
-    outline: none;
+  border: none;
+  box-shadow: #cbcbcb 0 4px 8px 0;
+  border: 1px solid #cbcbcb;
+  padding: 0.1rem;
+  outline: none;
 }
 
 .date-picker-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .date-input {
-    width: 100%;
-    padding: 5px 15px;
-    font-size: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #f0f0f0;
-    color: #333;
-    appearance: none;
-    -webkit-appearance: none;
-    padding-right: 40px;
-    outline: none;
-    cursor: pointer;
+  width: 100%;
+  padding: 5px 15px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 40px;
+  outline: none;
+  cursor: pointer;
 }
 
 .calendar-icon {
-    position: absolute;
-    right: 15px;
-    color: var(--blue);
-    font-weight: 500;
-    pointer-events: none;
-    cursor: pointer;
+  position: absolute;
+  right: 15px;
+  color: var(--blue);
+  font-weight: 500;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .bannerBooking .bookingLayer .boxWrapper {
-    background-color: var(--blue);
-    font-weight: 600;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    border: none;
-    outline: none;
-    padding: 0.9rem;
+  background-color: var(--blue);
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.9rem;
 }
 
 .bannerBooking .bookingLayer .boxWrapper:hover {
-    background-color: var(--yellow);
-    font-weight: 600;
-    transition: all .2s ease-in-out;
+  background-color: var(--yellow);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
 }
 
 .boxWrapper .searchText {
-    color: var(--white);
-    font-weight: 600;
-    border: none;
-    outline: none;
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  outline: none;
 }
-
 
 /**********WHY CHOOSE US**********/
 .chooseUs .ChooseUS {
-    text-align: center;
-    font-size: 1.3rem;
-    color: var(--blue);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 0.8rem;
 }
 
 .chooseUs .InfoData {
-    text-align: center;
-    font-weight: 600;
+  text-align: center;
+  font-weight: 600;
 }
 
 /********ABOUT US*******/
 .AboutUs {
-    background-color: var(--lightgrey);
-    font-weight: 600;
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
+  background-color: var(--lightgrey);
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
 }
 
 .AboutUs .aboutuslogo {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 
 .AboutUs .aboutuslogo .outerWrapperlogo {
-    width: auto;
-    height: auto;
+  width: auto;
+  height: auto;
 }
 
 .AboutUs .aboutTextHead {
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 4px;
-    color: var(--blue);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  color: var(--blue);
 }
 
 .AboutUs .aboutTextCont {
-    font-size: 2.4rem;
-    font-weight: 700;
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
 .AboutUs .infoTaskData {
-    padding-top: 2rem;
+  padding-top: 2rem;
 }
 
 .AboutUs .infoTaskData .boxOuterWrappers {
-    background-color: var(--white);
-    font-weight: 600;
-    padding: 1.6rem;
-    border-radius: 50%;
-    height: 100%;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--white);
+  font-weight: 600;
+  padding: 1.6rem;
+  border-radius: 50%;
+  height: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .AboutUs .infoTaskData .boxOuterWrappers:hover {
-    background-color: var(--blue);
-    font-weight: 600;
+  background-color: var(--blue);
+  font-weight: 600;
 }
 
 .AboutUs .infoTaskData .boxOuterWrappers:hover .iconLogo {
-    color: var(--white);
-    font-weight: 600;
+  color: var(--white);
+  font-weight: 600;
 }
 
 .AboutUs .infoTaskData .boxOuterWrappers .iconLogo {
-    color: var(--blue);
-    font-weight: 600;
-    transition: color 0.3s ease;
+  color: var(--blue);
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .AboutUs .infoTaskData .subtextHead {
-    font-size: 1.3rem;
-    font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .AboutUs .infoTaskData .subtextCont {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--grey);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey);
 }
 
 /**********COMPANY JOURNEY**********/
 .CompanyJourney .JourneyInfo {
-    text-align: center;
-    font-size: 1.4rem;
-    color: var(--blue);
-    font-weight: 600;
-    letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .JourneyCont {
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--black);
-    text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--black);
+  text-align: center;
 }
 
 /********POPULAR ACTIVITY********/
 .Activity {
-    background-color: var(--lightgrey);
-    width: 100%;
-    font-weight: 500;
-    height: 100%;
-    padding: 2rem;
+  background-color: var(--lightgrey);
+  width: 100%;
+  font-weight: 500;
+  height: 100%;
+  padding: 2rem;
 }
 
 .Activity .activityContInfo {
-    text-align: center;
-    font-size: 1.4rem;
-    color: var(--blue);
-    font-weight: 600;
-    letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .Activity .activityHeadInfo {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--black);
-    font-weight: 500;
-    max-width: 500px;
-    margin: auto;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 500;
+  max-width: 500px;
+  margin: auto;
 }
 
 /*********TRIP TOUR*********/
 .TripTour .tourInfoCont {
-    text-align: center;
-    font-size: 1.4rem;
-    color: var(--blue);
-    font-weight: 600;
-    letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .TripTour .tourInfoHead {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--black);
-    font-weight: 500;
-    max-width: 500px;
-    margin: auto;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--black);
+  font-weight: 500;
+  max-width: 500px;
+  margin: auto;
 }
 
 .TripTour .triplogo {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .TripTour .logoWarpper::before {
-    background: linear-gradient(180deg, rgba(0, 26, 61, 0), #000);
-    position: absolute;
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    transition: all .3s ease-in-out;
-    opacity: .8;
+  background: linear-gradient(180deg, rgba(0, 26, 61, 0), #000);
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.8;
 }
 
 .TripTour .logoWarpper:hover::after {
-    opacity: 0.8;
-    background: linear-gradient(180deg, rgba(0, 108, 228, 0), rgba(0, 108, 228, .75));
+  opacity: 0.8;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 108, 228, 0),
+    rgba(0, 108, 228, 0.75)
+  );
 }
 
 .TripTour .logoWarpper:hover .abtTour {
-    background-color: var(--yellow) !important;
-    font-weight: 600;
-    color: var(--black);
-    border: none !important;
-    transition: all .2s ease-in-out;
+  background-color: var(--yellow) !important;
+  font-weight: 600;
+  color: var(--black);
+  border: none !important;
+  transition: all 0.2s ease-in-out;
 }
 
 .TripTour .logoWarpper::after {
-    opacity: 0;
-    background: linear-gradient(180deg, rgba(0, 108, 228, 0), rgba(0, 108, 228, .75));
-    position: absolute;
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 10px;
-    transition: all .3s ease-in-out;
+  opacity: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 108, 228, 0),
+    rgba(0, 108, 228, 0.75)
+  );
+  position: absolute;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
-
-
 .TripTour .logoWarpper .SwitchText {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 600;
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 600;
 }
 
 .TripTour .logoWarpper .SwitchText .abtTour {
-    background-color: transparent;
-    border: 1px solid var(--white);
-    font-weight: 600;
-    padding: 0.3rem 0.6rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 6px;
 }
 
 .TripTour .logoWarpper .countryInfo {
-    text-align: center;
-    font-weight: 600;
-    color: var(--white);
-    position: absolute;
-    bottom: 0.6rem;
-    left: 1.8rem;
-    font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--white);
+  position: absolute;
+  bottom: 0.6rem;
+  left: 1.8rem;
+  font-size: 1.2rem;
 }
-
 
 /**********Testinomial**********/
 .Testinomial {
-    background-color: var(--lightgrey);
-    font-weight: 600;
-    height: 100dvh;
-    width: 100%;
+  background-color: var(--lightgrey);
+  font-weight: 600;
+  height: 90dvh;
+  width: 100%;
 }
 
 .Testinomial .testiInfo {
-    text-align: center;
-    font-size: 1.4rem;
-    color: var(--blue);
-    font-weight: 600;
-    letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--blue);
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .Testinomial .testCont {
-    text-align: center;
-    font-size: 2.8rem;
-    color: var(--black);
-    font-weight: 500;
-    max-width: 500px;
-    margin: auto;
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--black);
+  font-weight: 500;
+  max-width: 500px;
+  margin: auto;
 }
 
 .Testinomial .outerWrapperTesti {
-    background-color: var(--white);
-    font-weight: 600;
-    padding: 2rem;
-    border-radius: 10px;
-    width: 100%;
+  background-color: var(--white);
+  font-weight: 600;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
 }
 
 .Testinomial .outerWrapperTesti .subInnerTestiBox {
-    display: flex;
-    align-items: end;
-    gap: 1rem;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
 }
 
 .Testinomial .outerWrapperTesti .testilogo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
 }
 
 .Testinomial .outerWrapperTesti .testName {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0rem;
 }
 
 .Testinomial .outerWrapperTesti .testProfession {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--grey);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--grey);
 }
 
 .Testinomial .outerWrapperTesti .testInfo {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--grey);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--grey);
 }
 
-@media(max-width:1440px){
-    .Testinomial{
-        height: 90dvh;
-    }
+@media only screen and (max-width: 1024px) {
+  .Testinomial {
+    height: 95dvh;
+  }
 }

@@ -1,0 +1,32 @@
+.PopularActivity{
+    background: url(https://res.cloudinary.com/dixfg1bvv/image/upload/v1725086240/22-Her0_faenok.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 30vw;
+    width: 100%;
+}
+.PopularActivity h1{
+    color: var(--white);
+    /* text-align: center; */
+    padding-top: 14rem;
+    font-weight: 750;
+    margin-left: 4rem;
+    font-size:50px ;
+}
+.popularActivityHappeningSlider{
+    padding-left:3rem ;
+    padding-right:3rem ;
+    margin-bottom: 2rem;
+    
+}
+.popularDestinationActivity{
+    padding: 1rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+.topActivites h4{
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}

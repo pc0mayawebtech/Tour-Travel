@@ -1,0 +1,58 @@
+.tourGuides{
+    background: url(https://res.cloudinary.com/dixfg1bvv/image/upload/v1725103408/breadcrumb-bg.0770303e_m7totj.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 20vw;
+    width: 100%;
+}
+.tourGuides h2{
+    text-align: center;
+    font-weight: 700;
+    color: var(--white);
+    padding-top: 12rem;
+    font-size: 40px;
+}
+.guideDetails img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+.guideDetails{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.guideTeam{
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+.guideDetails p{
+    margin: 0;
+    padding: 7px;
+    font-weight: 700;
+}
+.guideDetails :hover{
+    transform: scale(1.01);
+    color: var(--blue);
+}
+@media (max-width: 1024px) {
+    .tourGuides h2{
+        text-align: center;
+        font-weight: 700;
+        color: var(--white);
+        padding-top:5rem;
+        font-size: 40px;
+    }
+}
+@media (max-width: 768px) {
+    .tourGuides h2{
+        
+        padding-top:2rem;
+    }
+}
+@media (max-width: 425px) {
+    .tourGuides h2{
+         padding-top:0rem;
+        font-size: 35px;
+    }
+}
