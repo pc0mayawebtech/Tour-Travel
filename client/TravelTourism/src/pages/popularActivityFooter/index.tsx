@@ -8,6 +8,11 @@ import NewDestinations from "./destination";
 import "./index.css";
 
 const PopularActivity = () => {
+  window.scrollTo({
+    top: 0,
+    left: 100,
+    behavior: "smooth",
+  });
   return (
     <>
       <Header />

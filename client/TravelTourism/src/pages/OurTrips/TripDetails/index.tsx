@@ -1,6 +1,3 @@
-import { useEffect, useState } from "react";
-import Header from "../../shared-components/header";
-import { Link, useSearchParams } from "react-router-dom";
 import {
   CalendarDays,
   ChevronDown,
@@ -8,40 +5,49 @@ import {
   MapPin,
   Search,
 } from "lucide-react";
+import Header from "../../../shared-components/header";
 import "./index.css";
 import DatePicker from "react-datepicker";
-import Slick from "./slick";
-import Promotionslick from "./PromotionSlick";
-import Flightpromotion from "./flightPromotion";
-import Featurehome from "./featurehome";
-import Flightreview from "./flighthotelreview";
-import Destinationoutisdeindia from "./Destinationoutside";
-import Footer from "../../shared-components/footer";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Footer from "../../../shared-components/footer";
+import TripDetails from "../../../constant/OurTripDetails";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import Slick from "../../Flighthotel/slick";
+import Promotionslick from "../../Flighthotel/PromotionSlick";
 
-const Flighthotel = () => {
+const MoreTripDetails = () => {
   const [isView, setIsView] = useState(false);
   const [isShow, setIsShow] = useState(false);
   const [startDate, setStartDate] = useState(new Date());
   const [isOpen, setIsOpen] = useState(false);
-  const [searchParams] = useSearchParams();
 
-  console.log(searchParams.get("scrollTo"), "loc");
+  const navigate= useNavigate()
+
+  window.scrollTo({
+    top: 0,
+    left: 100,
+    behavior: "smooth",
+  });
 
   useEffect(() => {
-    const scroll = document.getElementById("featuredHome");
-    if (searchParams.get("scrollTo")) {
-      scroll?.scrollIntoView({ behavior: "smooth" });
-    } 
-    // else
-    //   window.scrollTo({
-    //     top: 0,
-    //     behavior: "smooth",
-    //   });
-  },[]);
+    Aos.init({
+      duration:1500,
+        once: true,
+    });
+    
+  }, []);
+
+  const handleClick=()=>{
+    navigate("/flighthotel?scrollTo=featuredHome")
+
+  }
 
   return (
-    <div>
+    <>
       <Header />
+
       <div className="flightHotelBanner"></div>
       <section className="HomeBanner mb-5">
         <div className="bannerBooking">
@@ -179,66 +185,53 @@ const Flighthotel = () => {
         </div>
       </section>
 
-      <div className="topDestination container">
-        <div className="topDestinationHeading">
-          <p>Top Destinations in India</p>
+      <div className="container">
+        <div>
+          <h2>Explore Destinations</h2>
+          <p>from New Delhi</p>
         </div>
-        <Slick />
-      </div>
-      <div className="promotion container">
-        <div className="promotionheading">
-          <p>Accommodation Promotions</p>
-        </div>
-        <Promotionslick />
-      </div>
-      <div className="flightPromotion container">
-        <div className="flightPromotionHeading">
-          <p>Flights & Activities Promotions</p>
-        </div>
-        <Flightpromotion />
-      </div>
-      <div className="featureHome container" id="featuredHome">
-        <div className="featureHomeHeading">
-          <p>Featured homes recommended for you</p>
-        </div>
-        <Featurehome />
-      </div>
-      <div className="review container">
-        <div className="reviewHeading">
-          <p>Overheard from travelers</p>
-        </div>
-        <div className="reviewContent">
-          <div className="row ">
-            <Flightreview
-              hotelname="Hotel Granvia Kyoto"
-              place="in Japan"
-              name="Diane from the United States"
-              text="Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made"
-            />
-            <Flightreview
-              hotelname="Novotel Rotorua Lakeside "
-              place="in New Zealand"
-              name=" Michael from Australia"
-              text='"Started with stress, ended with joy. Thanks Agoda."'
-            />
-            <Flightreview
-              hotelname="Fairmont Singapore"
-              place="in Singapore"
-              name="Malvin from Singapore"
-              text="The hotel was simple amazing and I couldn't thank Agoda more for helping out."
-            />
+        <div className="row">
+          {TripDetails.map((item, id) => {
+            return (
+              <div className="col-lg-4 col-md-12 col-sm-12 col-12" key={id}>
+                <div data-aos="flip-left"
+                 className="tripDetails">
+                  <div className="tripDetailsImage">
+                    <img src={item.image} />
+                  </div>
+                  <div>
+                    <p className="tripLocation">
+                      <strong>{item.Loctaion}</strong>
+                    </p>
+                    <p className="tripIndia">
+                      <span>INDIA</span>
+                      <p className="tripPrice">
+                        <strong>{item.Price}</strong>
+                      </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+          <div className="moreDestinations" >
+            <h3>More Destinations in India </h3>
+            <Slick/>
           </div>
         </div>
-      </div>
-      <div className="destinationOutside container">
-        <div className="destinationOutsideHeading">
-          <p>Popular destinations outside India</p>
+        <div className="extraDiscount" >
+          <h3>For Extra Discount</h3>
+          <Promotionslick/>
         </div>
-        <Destinationoutisdeindia />
+
+        <div className="tripHotels">
+          <h2>For Hotels and Home </h2>
+          <button className="exploreMoreBtn" onClick={handleClick}>Click Here</button>
+        </div>
       </div>
+
       <Footer />
-    </div>
+    </>
   );
 };
-
-export default Flighthotel;
+export default MoreTripDetails;

@@ -1,0 +1,70 @@
+.ourTrips {
+  background: url(https://res.cloudinary.com/dixfg1bvv/image/upload/v1725257042/Hero-Image_TG-home2-1478x700_qgfchn.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100%;
+  text-align: center;
+}
+.ourTrips h1{
+    color: var(--white);
+    padding-top: 10rem;
+    font-weight: 700;
+    font-size: 45px;
+}
+.ourTripsLink{
+    color: var(--white);
+}
+.tripsLink{
+    color: var(--white);
+    text-decoration: none;
+}
+.ourTripsLink :hover{
+    color: var(--blue);
+    text-decoration: underline;
+    transition: all .4s;
+}
+.tripPlans{
+    text-align: center;
+}
+.tripPlans h2{
+    margin-top: 2rem;
+    /* margin-left: 10rem;
+    margin-bottom: 3rem; */
+    text-align: center;
+}
+.planTrips{
+ padding-left: 7rem; 
+ justify-content: center; 
+ align-items: center; 
+}
+.tripsImage img{
+    height: 20vw;
+
+}
+.aboutTrip p{
+    font-size: 24px;
+    /* text-align: justify; */
+}
+.aboutTrip span{
+    text-align: justify;
+    font-size: large;
+}
+.tripDetailsImages img{
+    height: 20vw;
+    margin-left: 2rem;
+}
+.exploreMoreBtn{
+    text-align: center;
+    margin-top: 1rem;
+    height: 3rem;
+    width: 12rem;
+    font-size: larger;
+    background-color: var(--blue);    
+    color: var(--white);
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 4rem;
+}

@@ -59,7 +59,7 @@ const Footer = () => {
               <h3 className="mainHead">Destinations</h3>
               <ul>
                 <li>
-                  <Link to="/" className="footInfoLink">
+                  <Link to="/trips" className="footInfoLink">
                     Our Trips
                   </Link>
                 </li>

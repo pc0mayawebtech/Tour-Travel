@@ -79,8 +79,7 @@ const CouponsAndDeals = () => {
         <div className="showMore">
           {showMoreBtn ? (
             <button className="showMoreBtn" onClick={handleShowMore}>
-              {" "}
-              Show More{" "}
+              Show More
             </button>
           ) : (
             <button className="showMoreBtn" onClick={handleShowLess}>

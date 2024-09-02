@@ -1,9 +1,14 @@
-import GuideDetails from "../constant/tourguide";
-import Footer from "../shared-components/footer";
-import Header from "../shared-components/header";
+import GuideDetails from "../../constant/tourguide";
+import Footer from "../../shared-components/footer";
+import Header from "../../shared-components/header";
 import "./index.css"
 
 const TourGuide=()=>{
+    window.scrollTo({
+        top: 0,
+        left: 100,
+        behavior: "smooth",
+      });
     return(
         <>
         <Header/>

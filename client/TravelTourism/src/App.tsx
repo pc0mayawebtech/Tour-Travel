@@ -17,7 +17,9 @@ import Signin from "./pages/signup"
 import Protected from "./utils/protected"
 import Reviews from "./pages/Reviews"
 import PopularActivity from "./pages/popularActivityFooter"
-import TourGuide from "./travelGuide"
+import TourGuide from "./pages/travelGuide"
+import OurTrips from "./pages/OurTrips"
+import MoreTripDetails from "./pages/OurTrips/TripDetails"
 
 const App = () => {
 
@@ -35,12 +37,14 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/activities" element={<Activity />} />
         <Route path="/couponsAndDeals" element={<CouponsAndDeals />} />
-        <Route path="/airlines" element={<AirLines />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/train" element={<Train />} />
+        <Route path ="/airlines" element ={<AirLines/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/train" element={<Train/>}/>
         <Route path="/popularActivity" element={<PopularActivity />} />
-        <Route path="/feedback" element={<Reviews />} />
-        <Route path="/tourGuide" element={<TourGuide />} />
+        <Route path="/feedback" element={<Reviews/>}/>
+        <Route path="/tourGuide" element={<TourGuide/>}/>
+        <Route path="/trips" element={<OurTrips/>}/>
+        <Route path="/tripDetails" element={<MoreTripDetails/>}/>
       </Routes>
       <ToastContainer />
     </>
