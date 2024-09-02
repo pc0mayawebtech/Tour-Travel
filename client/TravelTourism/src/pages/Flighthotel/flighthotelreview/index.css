@@ -1,31 +1,36 @@
-.reviewTile{
-    width: 31%;
+.reviewTile {
     height: 300px;
+    max-height: 300px;
     text-overflow: ellipsis;
     overflow: hidden;
     border: 1px solid #737373;
     text-align: center;
     padding: 20px;
     border-bottom: 4px solid #5392F9;
+    border-radius: 10px;
 }
-.reviewHotelName{
+
+.reviewHotelName {
     font-size: 25px;
     font-weight: 700;
     color: #5392F9;
     margin-bottom: 1%;
 }
-.reviewPlace{
+
+.reviewPlace {
     font-size: 20px;
     color: #737373;
     margin-bottom: 1%;
 }
-.reviewText{
+
+.reviewText {
     line-height: 1.7rem;
     font-size: 20px;
     font-weight: 600;
     color: black;
 }
-.reviewerName{
+
+.reviewerName {
     font-size: 18px;
     color: #737373;
 }

@@ -8,7 +8,7 @@ import Footer from "../../shared-components/footer";
 import Destinationoutisdeindia from "../Flighthotel/Destinationoutside";
 
 export const Activity = () => {
-    
+
   return (
     <>
       <Header />
@@ -16,7 +16,6 @@ export const Activity = () => {
         <h1>Find your next Adventure</h1>
         <span>Bringing you the best activities from across the world</span>
       </div>
-      <div className="container-fluid">
         <div className="container">
           <div className="row">
             <div className="activityhappeningAround">
@@ -29,22 +28,21 @@ export const Activity = () => {
             </div>
           </div>
           <div>
-            <div className="choosingUs">
+            <div className="choosingUs mb-4">
               <h3>Why choose agoda??</h3>
             </div>
-            <div className="row  chosingUs">
+            <div className="row chosingUs">
               {ChooseUs.map((item, id) => {
                 return (
-                  <div
-                    className="col-lg-3 col-md-12 col-sm-12 col-12 whyChooseUs"
-                    key={id}
-                  >
-                    <div>
-                      <img src={item.img} />
-                    </div>
-                    <div className="choosingUsDetails">
-                      <h6>{item.detail1}</h6>
-                      <span>{item.detail2}</span>
+                  <div className="col-lg-4 col-md-12 col-sm-12 col-12" key={id}>
+                    <div className="whyChooseUs">
+                      <div>
+                        <img src={item.img} />
+                      </div>
+                      <div className="choosingUsDetails">
+                        <h6>{item.detail1}</h6>
+                        <span>{item.detail2}</span>
+                      </div>
                     </div>
                   </div>
                 );
@@ -65,7 +63,7 @@ export const Activity = () => {
               <Destinationoutisdeindia />
             </div>
           </div>
-        
+
           <div className="customerReview">
             <div className="reviewsAboutServices">
               <h3>Overheard from travelers</h3>
@@ -94,7 +92,6 @@ export const Activity = () => {
             </div>
           </div>
         </div>
-      </div>
       <Footer />
     </>
   );

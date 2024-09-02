@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import Featurehometile from "./featurehomeprop";
 import "./index.css"
 
 const Featurehome = () => {
     const [place, setPlace] = useState(1);
 
-    const handlePlace = (id) => {
+    const handlePlace = (id: SetStateAction<number>) => {
       setPlace(id);
     };
   return (

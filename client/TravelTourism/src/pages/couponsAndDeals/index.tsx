@@ -8,7 +8,7 @@ import Flightpromotion from "../Flighthotel/flightPromotion";
 import { useState } from "react";
 
 const CouponsAndDeals = () => {
-  const [offers, setOffers] = useState(Coupons.slice(0, 5));
+  const [offers, setOffers] = useState(Coupons.slice(0, 4));
   const [showMoreBtn, setShowMoreBtn] = useState(true);
 
   const navigate = useNavigate();
@@ -35,45 +35,46 @@ const CouponsAndDeals = () => {
       </div>
       <div className="container">
         <div className="row">
-          <div className="accommodationCoupon">
+          <div className="accommodationCoupon mb-3">
             <h3>Accommodation Coupons and Deals</h3>
           </div>
-          <div className="accommodationCouponSlider">
+          <div className="accommodationCouponSlider mb-4">
             <Promotionslick />
           </div>
 
-          <div className="flightCoupons">
+          <div className="flightCoupons mb-3">
             <h3> Flight Coupons and Deals</h3>
           </div>
-          <div className="flightCouponSlider">
+          <div className="flightCouponSlider mb-4">
             <Flightpromotion />
           </div>
         </div>
-        <div className="amazingDeals">
+        <div className="amazingDeals mb-3">
           <h3>More Amazing Deals</h3>
         </div>
       </div>
       <div className="container">
-        <div className="row amazingCoupons">
-          {offers.map((item, id) => {
-            return (
-              <div
-                className="col-lg-2 col-md-12 col-sm-12 col-12 todaysCoupons"
-                key={id}
-              >
-                <div className="">
-                  <img src={item.image} />
+        <div className="amazingCoupons">
+          <div className="row">
+            {offers.map((item, id) => {
+              return (
+                <div className="col-lg-3 col-md-12 col-sm-12 col-12" key={id}>
+                  <div className="todaysCoupons">
+                    <div>
+                      <img src={item.image} />
+                    </div>
+                    <div>
+                      <h6>{item.offer}</h6>
+                      <p>{item.details}</p>
+                    </div>
+                    <button className="couponClaimBtn" onClick={handleClaim}>
+                      {item.book}
+                    </button>
+                  </div>
                 </div>
-                <div>
-                  <h6>{item.offer}</h6>
-                  <p>{item.details}</p>
-                </div>
-                <button className="couponClaimBtn" onClick={handleClaim}>
-                  {item.book}
-                </button>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
         <div className="showMore">
           {showMoreBtn ? (

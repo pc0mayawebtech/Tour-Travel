@@ -3,7 +3,7 @@ const ChooseUs=[
         id:1,
         img:"https://res.cloudinary.com/dixfg1bvv/image/upload/v1724918509/agoji-city-page-2-m_xci1fd.png",
         detail1:"300,000+ experiences",
-        detail2:"Book any tour or attraction around the world",
+        detail2:"Book any tour or attraction around the world top-notch customer support",
     },
     {
         id:2,
