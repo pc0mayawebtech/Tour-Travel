@@ -5,14 +5,16 @@ import { useState } from 'react';
 
 const Header = () => {
     const [isView, setIsView] = useState(false);
-   
-    const navigate= useNavigate();
-    
-    const handleLogOut=()=>{
-       localStorage.removeItem("token")
-        navigate("/",  { replace: true })
+    const navigate = useNavigate();
+
+    const handleLogOut = () => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            localStorage.removeItem('token');
+        }
+        navigate("/", { replace: true })
     }
-    
+
     return (
         <>
             <header className='outerBox'>
@@ -39,9 +41,7 @@ const Header = () => {
                             </ul>
                         </nav>
                         <div className='createAccount'>
-                            <span><Link to="/" className='user1'>Log In</Link></span>
                             <span className='user1' onClick={handleLogOut}>Log Out</span>
-
                             <span><Link to="/signup" className='user2'>Create account</Link></span>
                         </div>
                     </div>
