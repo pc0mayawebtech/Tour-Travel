@@ -20,6 +20,7 @@ import PopularActivity from "./pages/popularActivityFooter"
 import TourGuide from "./pages/travelGuide"
 import OurTrips from "./pages/OurTrips"
 import MoreTripDetails from "./pages/OurTrips/TripDetails"
+import Career from "./pages/Career"
 
 const App = () => {
 
@@ -40,6 +41,7 @@ const App = () => {
         <Route path ="/airlines" element ={<AirLines/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/train" element={<Train/>}/>
+        <Route path="/career" element={<Career/>}/>
         <Route path="/popularActivity" element={<PopularActivity />} />
         <Route path="/feedback" element={<Reviews/>}/>
         <Route path="/tourGuide" element={<TourGuide/>}/>
@@ -52,3 +54,4 @@ const App = () => {
 };
 
 export default App;
+   

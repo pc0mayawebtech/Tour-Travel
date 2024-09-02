@@ -21,7 +21,7 @@ const Header = () => {
                 <div className="container-fluid">
                     <div className='InnerOuterWrapper'>
                         <label className='logo'>
-                            <span><Link to={'/home'}>agoda</Link></span>
+                            <span><Link to={'/home'} className='linkLogo'>agoda</Link></span>
                         </label>
                         <nav className='innerMenuList'>
                             <ul>
