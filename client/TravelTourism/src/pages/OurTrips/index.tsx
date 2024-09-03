@@ -9,16 +9,17 @@ import "aos/dist/aos.css";
 const OurTrips = () => {
   const navigate = useNavigate();
 
-  window.scrollTo({
-    top: 0,
-    left: 100,
-    behavior: "smooth",
-  });
   useEffect(() => {
     Aos.init({
-        once: true,
+      once: true,
     });    
+    window.scrollTo({
+      top: 0,
+      left: 100,
+      behavior: "smooth",
+    });
   }, []);
+  
   const handleExplore = () => {
     navigate("/tripDetails");
   };
@@ -32,7 +33,6 @@ const OurTrips = () => {
           <Link className="tripsLink" to="/home">
             Home
           </Link>
-          {">"}
           <Link className="tripsLink" to={"/trips"}>
             Trips
           </Link>
@@ -65,7 +65,7 @@ const OurTrips = () => {
             className="col-lg-6 col-md-12 col-sm-12 col-12 tripDetailsImages"
           >
             <img
-              src="https://res.cloudinary.com/dixfg1bvv/image/upload/v1725259432/Screenshot_2024-09-02_121330_okxzr3.png"
+              src="https://res.cloudinary.com/dixfg1bvv/image/upload/v1725350139/Screenshot_2024-09-02_121330_ee3baj.png"
               alt="plan trip"
             />
           </div>

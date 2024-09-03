@@ -1,4 +1,4 @@
-.PopularActivity{
+.popularActivity{
     background: url(https://res.cloudinary.com/dixfg1bvv/image/upload/v1725086240/22-Her0_faenok.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -6,7 +6,7 @@
     height: 30vw;
     width: 100%;
 }
-.PopularActivity h1{
+.popularActivity h1{
     color: var(--white);
     /* text-align: center; */
     padding-top: 14rem;
@@ -30,3 +30,30 @@
   margin-left: 1rem;
   margin-top: 1rem;
 }
+@media (max-width: 1024px){
+ .popularActivity   {
+    height: 30vw;
+    width: 100%;
+ }
+ .popularActivity h1{
+    padding-top: 5rem;
+ }
+}
+@media (max-width: 768px){
+    .popularActivity{
+        height: 40vw;
+    }
+    .popularActivity h1{
+       padding-top: 4rem;
+       font-size: 35px;
+    }
+   }
+   @media (max-width: 450px){
+    .popularActivity{
+        height: 40vw;
+    }
+    .popularActivity h1{
+       padding-top: 1rem;
+       font-size: 35px;
+    }
+   }

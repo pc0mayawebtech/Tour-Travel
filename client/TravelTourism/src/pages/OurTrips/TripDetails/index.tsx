@@ -25,16 +25,18 @@ const MoreTripDetails = () => {
 
   const navigate= useNavigate()
 
-  window.scrollTo({
-    top: 0,
-    left: 100,
-    behavior: "smooth",
-  });
+
 
   useEffect(() => {
     Aos.init({
       duration:1500,
         once: true,
+    });
+
+    window.scrollTo({
+      top: 0,
+      left: 100,
+      behavior: "smooth",
     });
     
   }, []);
@@ -194,7 +196,8 @@ const MoreTripDetails = () => {
           {TripDetails.map((item, id) => {
             return (
               <div className="col-lg-4 col-md-12 col-sm-12 col-12" key={id}>
-                <div data-aos="flip-left"
+                <div 
+                // data-aos="flip-left"
                  className="tripDetails">
                   <div className="tripDetailsImage">
                     <img src={item.image} />

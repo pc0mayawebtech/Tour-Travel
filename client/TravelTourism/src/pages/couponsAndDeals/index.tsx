@@ -20,7 +20,7 @@ const CouponsAndDeals = () => {
     setShowMoreBtn(!showMoreBtn);
   };
   const handleShowLess = () => {
-    setOffers(Coupons.slice(0, 5));
+    setOffers(Coupons.slice(0, 4));
     setShowMoreBtn(!showMoreBtn);
   };
   return (
@@ -63,13 +63,15 @@ const CouponsAndDeals = () => {
                     <div>
                       <img src={item.image} />
                     </div>
-                    <div>
+                    <div className="todaysCouponsDetails"> 
                       <h6>{item.offer}</h6>
                       <p>{item.details}</p>
                     </div>
-                    <button className="couponClaimBtn" onClick={handleClaim}>
-                      {item.book}
-                    </button>
+                    <div className="bookNowbtn">
+                      <button className="couponClaimBtn" onClick={handleClaim}>
+                        {item.book}
+                      </button>
+                    </div>
                   </div>
                 </div>
               );

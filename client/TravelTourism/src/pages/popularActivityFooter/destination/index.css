@@ -31,4 +31,17 @@
  .aboutDestination{
     margin-left: 2rem;
  }
- 
+ @media (max-width: 1024px){
+    .aboutDestination{
+        margin-left: 0;
+    }
+    .newDestionSlide{
+        height: 5rem;
+        width: 88%;
+    }
+ }
+ @media (max-width: 425px){
+    .newDestinations{
+        margin-top: -0.5rem;
+    }
+   }

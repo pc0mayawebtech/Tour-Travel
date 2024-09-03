@@ -11,18 +11,19 @@
     background-position: center;
     height: 75dvh;
     color: var(--white);
+    text-align: center;
 }
 
 .activityHeader h1 {
     font-size: 4rem;
     font-weight: 700;
     padding-top: 10rem;
-    padding-left: 7rem;
+
 }
 
 .activityHeader span {
     padding-top: 7rem;
-    padding-left: 7rem;
+    /* padding-left: 7rem; */
 }
 
 .topActivities {
@@ -95,16 +96,30 @@
     margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .whyChooseUs {
-        width: 28.7%;
+        width: 33%;
         padding: 10px;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .whyChooseUs {
-        width: 27%;
+        width: 30%;
         padding: 10px;
+        margin: 10px;
+    }
+    .activityHeader span{
+        font-size: larger;
+    }
+}
+
+@media (max-width: 450px) {
+    .whyChooseUs {
+        width: 28%;
+        margin: 10px;
+    }
+    .activityHeader span{
+        font-size: larger;
     }
 }

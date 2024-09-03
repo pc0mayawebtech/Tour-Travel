@@ -16,7 +16,7 @@ const PopularActivity = () => {
   return (
     <>
       <Header />
-      <div className="PopularActivity">
+      <div className="popularActivity">
         <h1>
           Popular Activities
           <p>Happening...</p>

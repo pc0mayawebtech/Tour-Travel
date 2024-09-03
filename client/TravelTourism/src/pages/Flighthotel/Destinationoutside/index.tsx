@@ -17,6 +17,28 @@ const Destinationoutisdeindia = () => {
       onSwiper={(swiper) => console.log(swiper)}
       navigation
       pagination={{ clickable: true }}
+      breakpoints={{
+        425: {
+            slidesPerView:1.3,
+            spaceBetween: 20,
+        },
+        640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
+        1440: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+      },
+    }}
     >
        {Outsidedestination.map((item, id) => (
         <SwiperSlide key={id}>
