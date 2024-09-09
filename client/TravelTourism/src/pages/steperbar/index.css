@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.StepperBarOuter {
+    background-color: var(--white);
+    font-weight: 600;
+    padding: 1rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.outerStepper {
+    position: relative;
+}
+
+.lineStepper {
+    position: relative;
+    width: 75%;
+    height: 1.5px;
+    display: flex;
+    background-color: var(--black);
+    top: -5.1rem;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/**********MEDIA QUERY START***********/
+@media screen and (max-width: 991px) {
+    .StepperBarOuter {
+        padding: 0rem;
+    }
+}

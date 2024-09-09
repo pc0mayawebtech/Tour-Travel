@@ -2,7 +2,7 @@ import './index.css';
 import { RiFlightTakeoffFill } from "react-icons/ri";
 import { FaAngleDown } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
-import { useState } from 'react';
+import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useState } from 'react';
 import FlightView from '../../../api/FlightView';
 import { useQuery } from '@tanstack/react-query';
 
@@ -15,10 +15,10 @@ const FlightInfo = () => {
 
     console.log('flightdata', flightData?.data);
 
-    const calculateTotalTime = (departure, arrival) => {
+    const calculateTotalTime = (departure: string | number | Date, arrival: string | number | Date) => {
         const departureTime = new Date(departure);
         const arrivalTime = new Date(arrival);
-        const diff = arrivalTime - departureTime;
+        const diff = arrivalTime.getTime() - departureTime.getTime();
 
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
@@ -37,7 +37,7 @@ const FlightInfo = () => {
     return (
         <>
             <div className="col-lg-9">
-                {flightData.data.map((item) => (
+                {flightData.data.map((item: { id: Key | null | undefined; airline: { name: string | number | boolean | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | ReactPortal | null | undefined; }; departure: { scheduled: string | number | Date; timezone: string | number | boolean | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | ReactPortal | null | undefined; }; arrival: { scheduled: string | number | Date; timezone: string | number | boolean | ReactElement<unknown, string | JSXElementConstructor<unknown>> | Iterable<ReactNode> | ReactPortal | null | undefined; }; }) => (
                     <div className='backWrapper mb-4' key={item.id}>
                         <div className="flightOuterWrapper">
                             <div className='d-flex align-items-center gap-3 w-25'>
