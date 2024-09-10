@@ -455,3 +455,10 @@ body {
     height: 95dvh;
   }
 }
+@media (max-width:768px){
+  .bannerBooking .bookingLayer{
+    height: 110px;
+    padding: 10px;
+  }
+  
+}

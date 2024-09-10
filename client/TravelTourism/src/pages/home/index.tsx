@@ -46,7 +46,7 @@ const Home = () => {
                      <div className="col-xxl-9 col-xl-10 col-lg-11">
                         <div className='bookingLayer'>
                            <div className="row">
-                              <div className="col-lg-3">
+                              <div className="col-lg-3 col-md-12 col-sm-12 col-12">
                                  <div className='d-flex align-items-center gap-3'>
                                     <div className='search-icon-bg'>
                                        <span className='locateIcon'>
