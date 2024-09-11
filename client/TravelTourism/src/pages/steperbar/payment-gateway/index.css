@@ -147,3 +147,145 @@
     color: var(--blue);
     font-weight: 600;
 }
+
+.paymentMethod {
+    color: #4cbd0e;
+    text-align: center;
+    font-size: small;
+    font-weight: 600;
+}
+
+.paymentCards {
+    display: flex;
+    background-color: rgb(83, 146, 249);
+    color: var(--white);
+
+}
+
+.cards {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 18rem;
+}
+
+.paymentWith {
+    padding: 10px;
+
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    input {
+        margin: 5px;
+    }
+}
+
+.cards img {
+    height: 3rem;
+    padding: 7px;
+    margin-top: 10px;
+}
+
+.compulsionSymbol {
+    color: var(--red);
+}
+
+.creditCardPayments {
+    width: 100%;
+    height: 2.5rem;
+    padding: 2px;
+}
+
+.checkIcon {
+    margin: 10px;
+}
+
+.selectMethod , .cardPay {
+    padding: 10px;
+}
+
+.paymentsCredit {
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+.cardHolderName {
+    width: 100%;
+    height: 2.5rem;
+    outline: none;
+    padding: 5px;
+}
+
+.cardHolderName:focus {
+    border-color: var(--blue);
+}
+
+.cvvImage img {
+    padding-top: 2rem;
+    margin-top: 7px;
+}
+
+.onlinePayment {
+    margin-top: 1rem;
+    border: 2px solid var(--blue);
+}
+.paymentRedirect li{
+    list-style: disc;
+}
+.payNowBtn{
+    color: var(--white);
+    background-color: var(--blue);
+    outline: none;
+    border-radius: 7px;
+    border: none;
+    padding: 5px ;
+    width: 7rem;
+    
+}
+.payServices{
+    display: flex;
+    justify-content: space-between;
+    span{
+        padding: 10px;
+        margin-top: 10px;
+        font-size: smaller;
+    }
+}
+.payNow{
+    padding: 10px;
+}
+.onlinePaymentMethod{
+    width: 1.5rem;
+    background: var(--white);
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.paymentActive{
+    width: 1rem;
+    background: var(--blue);
+    height: 1rem;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 4px;
+
+}
+@media(max-width: 1024px) {
+    .checkIcon {
+        margin: 7px;
+    }
+
+    .creditCardPayments {
+        /* width: 90%; */
+        height: 3rem;
+    }
+
+    .cardHolderName {
+        height: 3rem;
+    }
+
+}

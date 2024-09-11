@@ -20,12 +20,9 @@ import PopularActivity from "./pages/popularActivityFooter"
 import TourGuide from "./pages/travelGuide"
 import OurTrips from "./pages/OurTrips"
 import MoreTripDetails from "./pages/OurTrips/TripDetails"
-<<<<<<< Updated upstream
 import Career from "./pages/Career"
 import StepperBar from "./pages/steperbar"
 import PassengerDetail from "./pages/steperbar/passengar-details"
-=======
->>>>>>> Stashed changes
 
 const App = () => {
 
@@ -43,7 +40,6 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/activities" element={<Activity />} />
         <Route path="/couponsAndDeals" element={<CouponsAndDeals />} />
-<<<<<<< Updated upstream
         <Route path="/airlines" element={<AirLines />} />
         <Route path="/about" element={<About />} />
         <Route path="/train" element={<Train />} />
@@ -55,7 +51,6 @@ const App = () => {
         <Route path="/tripDetails" element={<MoreTripDetails />} />
         <Route path="/stepperbar" element={<StepperBar />} />
         <Route path="/details" element={<PassengerDetail />} />
-=======
         <Route path ="/airlines" element ={<AirLines/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/train" element={<Train/>}/>
@@ -64,7 +59,6 @@ const App = () => {
         <Route path="/tourGuide" element={<TourGuide/>}/>
         <Route path="/trips" element={<OurTrips/>}/>
         <Route path="/tripDetails" element={<MoreTripDetails/>}/>
->>>>>>> Stashed changes
       </Routes>
       <ToastContainer />
     </>

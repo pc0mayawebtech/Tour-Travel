@@ -29,7 +29,7 @@ const PassengerDetail = () => {
             mnumber: '',
             email: '',
         }
-
+    
         let hasError = false;
 
         if (!firstname || firstname.trim()) {
