@@ -91,7 +91,7 @@ const PaymentGateway = () => {
     errors.cNumber ="Required";
     hasError= true;
   }
-  else if (cNumber.length == 12) {
+  else if (cNumber.length < 12) {
     errors.cNumber = "Card Number is Required";
     hasError = true;
 }
@@ -99,7 +99,7 @@ if(!cvv || cvv.trim()){
   errors.cvv ="CVV is required";
   hasError= true;
 }
-else if (cvv.length == 3) {
+else if (cvv.length < 3) {
   errors.cvv = "First Name must be at least 3 characters long";
   hasError = true;
 }
@@ -107,7 +107,7 @@ if(!eDate || eDate.trim()){
   errors.eDate ="Date is required";
   hasError= true;
 }
-else if (eDate.length === 4) {
+else if (eDate.length < 4) {
   errors.eDate = "First Name must be at least 4 characters long";
   hasError = true;
 }

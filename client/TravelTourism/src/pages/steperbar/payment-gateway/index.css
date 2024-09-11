@@ -280,12 +280,58 @@
     }
 
     .creditCardPayments {
-        /* width: 90%; */
         height: 3rem;
     }
-
-    .cardHolderName {
-        height: 3rem;
+    .cards{
+           display: flex;
+            gap: 7Px;
+            align-items: center;
+            margin-left: 0;
+        }
     }
-
+@media (max-width :768px){
+    .cards{
+        display: flex;
+         gap: 7Px;
+         align-items: center;
+         margin-left: 10rem;
+     }
+ }
+@media (max-width: 450px) {
+    .cards{
+        display: flex;
+         gap: 1px;
+         align-items: center;
+         margin-left: 0;
+     }
+     .cards img {
+        height: 2.5rem;
+        padding: 6px;
+        margin-top: 24px;
+     }
+     .paymentCards{
+        display: flex;
+     }
+     .paymentWith{
+        padding: 1px;
+        span{
+            font-size: 12px;
+        }
+        p{
+            font-size: 10px;
+        }
+    }
+    .onlinePaymentMethod{
+        margin-right: 3px;
+        width: 2rem;
+    }
+    .paymentActive{
+        height: 1rem;
+        margin-left: 3px;
+        width: 1rem;
+        margin-top: 4px;
+    }
+    .cvvImage img{
+        display: none;
+    }
 }
