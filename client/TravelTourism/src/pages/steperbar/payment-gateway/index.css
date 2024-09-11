@@ -289,6 +289,21 @@
             margin-left: 0;
         }
     }
+    @media(max-width: 1440px) {
+        .checkIcon {
+            margin: 7px;
+        }
+    
+        .creditCardPayments {
+            height: 3rem;
+        }
+        .cards{
+               display: flex;
+                gap: 7Px;
+                align-items: center;
+                margin-left:9rem;
+            }
+        }
 @media (max-width :768px){
     .cards{
         display: flex;
@@ -296,8 +311,43 @@
          align-items: center;
          margin-left: 10rem;
      }
- }
-@media (max-width: 450px) {
+    }
+    @media (max-width: 645px) {
+        .cards{
+            display: flex;
+             gap: 1px;
+             align-items: center;
+             margin-left: 5rem;
+         }
+         .cards img {
+            height: 2.5rem;
+            padding: 6px;
+            margin-top: 24px;
+         }
+         .paymentCards{
+            display: flex;
+         }
+        .cvvImage img{
+            display: none;
+        }
+    }
+    @media (max-width: 506px) {
+    .cards{
+        display: flex;
+         gap: 1px;
+         align-items: center;
+         margin-left: 0;
+     }
+     .cards img {
+        height: 2.5rem;
+        padding: 6px;
+        margin-top: 24px;
+     }
+    .cvvImage img{
+        display: none;
+    }
+}
+@media (max-width: 480px) {
     .cards{
         display: flex;
          gap: 1px;
