@@ -2,6 +2,9 @@ import './index.css';
 import Footer from "../../shared-components/footer";
 import Header from "../../shared-components/header";
 import Stepper from "./stepper";
+import PassengerDetail from './passengar-details';
+import PaymentGateway from './payment-gateway';
+import { useState } from 'react';
 
 export interface PropsType {
     label: string;
@@ -10,16 +13,20 @@ export interface PropsType {
 };
 
 export const StepperBar: React.FC = () => {
+    const [currentStep, setCurrentStep] = useState(0);
+    const handleNext = () => {
+        if (currentStep < steps.length - 1) setCurrentStep(currentStep + 1);
+    }
     const steps: PropsType[] = [
         {
             id: 1,
             label: 'Personal Info',
-            content: <div>Passenger Details</div>,
+            content: <div><PassengerDetail handlNext={handleNext} /></div>,
         },
         {
             id: 2,
             label: 'Account Info',
-            content: <div>Payment Information</div>,
+            content: <div><PaymentGateway handleNext={handleNext} /></div>,
         },
         {
             id: 3,
@@ -33,8 +40,7 @@ export const StepperBar: React.FC = () => {
             <div className="StepperBarOuter">
                 <div className="container-fluid">
                     <div className='outerStepper'>
-                        <Stepper steps={steps} />
-                        {/* <span className='lineStepper'></span> */}
+                        <Stepper steps={steps} currentStep={currentStep} />
                     </div>
                 </div>
             </div>

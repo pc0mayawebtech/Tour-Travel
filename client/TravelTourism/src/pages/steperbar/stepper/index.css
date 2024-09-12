@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    /* margin-bottom: 2.5rem; */
     justify-content: center;
     align-items: center;
 }
@@ -37,8 +36,18 @@
     z-index: 9999;
 }
 
-.active {
+.step-number.active {
     background-color: var(--green);
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 50%;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    position: relative;
+    z-index: 9999;
 }
 
 .step-label {

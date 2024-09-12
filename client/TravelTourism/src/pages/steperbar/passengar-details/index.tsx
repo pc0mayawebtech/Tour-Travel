@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import PaymentGateway from '../payment-gateway';
 import './index.css';
-const PassengerDetail = () => {
+const PassengerDetail = ({ handlNext }) => {
     const [inputVal, setInputVal] = useState({
         firstname: '',
         lastname: '',
@@ -29,10 +28,10 @@ const PassengerDetail = () => {
             mnumber: '',
             email: '',
         }
-    
+
         let hasError = false;
 
-        if (!firstname || firstname.trim()) {
+        if (!firstname) {
             errors.firstname = "First Name is required";
             hasError = true;
         }
@@ -40,7 +39,7 @@ const PassengerDetail = () => {
             errors.firstname = "First Name must be at least 2 characters long";
             hasError = true;
         }
-        if (!lastname || lastname.trim()) {
+        if (!lastname) {
             errors.lastname = "Last Name is required";
             hasError = true;
         }
@@ -52,7 +51,7 @@ const PassengerDetail = () => {
             errors.mnumber = "Mobile Number is required";
             hasError = true;
         }
-        else if (mnumber.length <= 10) {
+        else if (mnumber.length < 10) {
             errors.mnumber = "Mobile Number must be at least 10 characters long";
             hasError = true;
         }
@@ -66,6 +65,18 @@ const PassengerDetail = () => {
 
         if (!hasError) {
             console.log('data is submit successfully');
+            setInputVal({
+                firstname: '',
+                lastname: '',
+                mnumber: '',
+                email: '',
+                error: {
+                    firstname: '',
+                    lastname: '',
+                    mnumber: '',
+                    email: '',
+                }
+            })
         }
         else {
             setInputVal(prevState => ({ ...prevState, error: errors }));
@@ -74,7 +85,7 @@ const PassengerDetail = () => {
     return (
         <>
             <section>
-                <div className="outerWrapper">
+                <div className='mt-4 mb-4'>
                     <div className="container-fluid">
                         <div className="row align-items-center justify-content-center">
                             <div className="col-lg-8">
@@ -101,18 +112,16 @@ const PassengerDetail = () => {
                                         </div>
                                         <div className='formOuterWrapper'>
                                             <label htmlFor="email" className='labelControl'>Email</label>
-                                            <input type="email" name="email" maxLength={10} id="email" value={inputVal.email} className='formControl' onChange={handleChange} />
+                                            <input type="email" name="email" id="email" value={inputVal.email} className='formControl' onChange={handleChange} />
                                             <p style={{ color: "red", fontSize: "0.8rem", textAlign: "start", marginTop: "-10px", marginBottom: "0.5rem" }}>{inputVal.error.email}</p>
                                         </div>
                                         <div className='formOuterWrapper mt-2'>
-                                            <button type="submit" className='btn btn btn-primary p-2 d-block m-auto'>Continue to Payment</button>
+                                            <button type="submit" onClick={handlNext} className='btn btn btn-primary p-2 d-block m-auto'>Continue to Payment</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-
-                        <PaymentGateway />
                     </div>
                 </div>
             </section>
@@ -120,4 +129,4 @@ const PassengerDetail = () => {
     )
 }
 
-export default PassengerDetail
+export default PassengerDetail;

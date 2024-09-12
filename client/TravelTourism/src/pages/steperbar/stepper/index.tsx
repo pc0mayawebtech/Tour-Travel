@@ -5,29 +5,35 @@ export interface DestructurePropsType {
     content: JSX.Element;
 };
 
+
+export interface StepperPropsType {
+    value: number,
+}
 interface PropsType {
-    steps: DestructurePropsType[]
+    steps: DestructurePropsType[],
+    currentStep: StepperPropsType,
 }
 
-const Stepper: React.FC<PropsType> = ({ steps }) => {
+const Stepper: React.FC<PropsType> = ({ steps, currentStep }) => {
     return (
-        <div className="stepper">
-            {
-                steps.map(({ label }, id) => (
-                    <>
-                        <div className="stepper-container" key={id}>
-                            <div className="step-number">
-                                {id + 1}
+        <>
+            <div className="stepper">
+                {
+                    steps.map(({ label }, id) => (
+                        <>
+                            <div className="stepper-container" key={id}>
+                                <div className={`step-number ${id <= currentStep && 'active'}`}>
+                                    {id + 1}
+                                </div>
+                                <div className="step-label">{label}</div>
                             </div>
-                            <div className="step-label">{label}</div>
-                        </div>
-                        {/* <hr style={{ height: "2.5rem", width: "0%", borderWidth: "0.2rem" }} /> */}
-                      
-                        <span className='lineStepper'></span>
-                    </>
-                ))
-            }
-        </div>
+                            {id < steps.length - 1 && <span className={`lineStepper ${id < currentStep && 'active'}`}></span>}
+                        </>
+                    ))
+                }
+            </div>
+            <div>{steps[currentStep].content}</div>
+        </>
     )
 }
 
