@@ -14,7 +14,8 @@
 }
 
 .outerStepper {
-    position: relative;
+    position: relative;    
+    margin-left: 10rem;
 }
 
 .lineStepper {
@@ -23,11 +24,11 @@
     height: 1.5px;
     display: flex;
     background-color: var(--black);
-    top: -5.1rem;
+    top: -1.1rem;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-}
+   }
 
 
 /**********MEDIA QUERY START***********/

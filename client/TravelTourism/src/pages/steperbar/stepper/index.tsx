@@ -21,7 +21,9 @@ const Stepper: React.FC<PropsType> = ({ steps }) => {
                             </div>
                             <div className="step-label">{label}</div>
                         </div>
-                        {/* <hr style={{ height: "2.5rem", width: "100%", borderWidth: "0.2rem" }} /> */}
+                        {/* <hr style={{ height: "2.5rem", width: "0%", borderWidth: "0.2rem" }} /> */}
+                      
+                        <span className='lineStepper'></span>
                     </>
                 ))
             }

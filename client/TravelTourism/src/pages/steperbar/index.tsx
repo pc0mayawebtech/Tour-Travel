@@ -34,7 +34,7 @@ export const StepperBar: React.FC = () => {
                 <div className="container-fluid">
                     <div className='outerStepper'>
                         <Stepper steps={steps} />
-                        <span className='lineStepper'></span>
+                        {/* <span className='lineStepper'></span> */}
                     </div>
                 </div>
             </div>
