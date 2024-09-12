@@ -48,17 +48,17 @@
     padding: 0px 0px;
     margin-top: -8px;
 }
-.lineStepper {
+/* .lineStepper {
     position: relative;
     width: 75%;
     height: 1.5px;
     display: flex;
     background-color: var(--black);
-    top: -2.1rem;
+    top: -1.1rem;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /**********MEDIA QUERY START**********/
 @media screen and (max-width: 991px) {
