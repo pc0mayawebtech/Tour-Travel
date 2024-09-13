@@ -30,7 +30,7 @@ export const StepperBar: React.FC = () => {
         },
         {
             id: 3,
-            label: 'Payment',
+            label: 'Payment Status',
             content: <div>Booking is Confirmed!</div>,
         },
     ];

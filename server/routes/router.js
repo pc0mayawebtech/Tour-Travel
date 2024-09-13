@@ -205,31 +205,31 @@ router.post('/orders', async (req, res) => {
     }
 });
 
-app.get('/payment/:paymentId', async (req, res) => {
-    const { paymentId } = req.params;
+// app.get('/payment/:paymentId', async (req, res) => {
+//     const { paymentId } = req.params;
 
-    const razorpay = new Razorpay({
-        key_id: "",
-        key_secret: "",
-    })
+//     const razorpay = new Razorpay({
+//         key_id: "",
+//         key_secret: "",
+//     })
 
-    try {
-        const payment = await razorpay.payments.fetch(paymentId);
-        if (!payment) {
-            return res.status(500).json('Error at razorpay loading');
-        }
+//     try {
+//         const payment = await razorpay.payments.fetch(paymentId);
+//         if (!payment) {
+//             return res.status(500).json('Error at razorpay loading');
+//         }
 
-        res.json({
-            status: payment.status,
-            method: payment.method,
-            amount: payment.amount,
-            currency: payment.currency
-        })
-    }
-    catch (error) {
-        res.status(500).send('failed to fetch');
-    }
-})
+//         res.json({
+//             status: payment.status,
+//             method: payment.method,
+//             amount: payment.amount,
+//             currency: payment.currency
+//         })
+//     }
+//     catch (error) {
+//         res.status(500).send('failed to fetch');
+//     }
+// })
 
 
 export default router;

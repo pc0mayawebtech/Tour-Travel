@@ -6,27 +6,27 @@ import "./index.css";
 // import { LuClock7 } from "react-icons/lu";
 // import { MdOutlineSecurity } from "react-icons/md";
 // import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 const PaymentGateway = () => {
-  const [responseId, setResponseId] = useState('');
-  const [responseState, setResponseState] = useState('');
+  // const [responseId, setResponseId] = useState('');
+  // const [responseState, setResponseState] = useState('');
 
-  const loadScript = (src: string) => {
-    return new Promise((resolve) => {
-      const script = document.createElement('script');
-      script.src = src;
+  // const loadScript = (src: string) => {
+  //   return new Promise((resolve) => {
+  //     const script = document.createElement('script');
+  //     script.src = src;
 
-      script.onload() = () => {
-        resolve(true);
-      }
+  //     script.onload() = () => {
+  //       resolve(true);
+  //     }
 
-      script.onerror() = () => {
-        resolve(false);
-      }
+  //     script.onerror() = () => {
+  //       resolve(false);
+  //     }
 
-      document.body.appendChild(script)
-    })
-  }
+  //     document.body.appendChild(script)
+  //   })
+  // }
   // const [accordionData, setAccordinData] = useState({
   //   one: false,
   //   two: false,

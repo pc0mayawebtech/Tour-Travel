@@ -38,6 +38,7 @@
 
 .step-number.active {
     background-color: var(--green);
+    background-color: var(--blue);
     height: 2.2rem;
     width: 2.2rem;
     border-radius: 50%;
@@ -56,6 +57,13 @@
     text-align: center;
     padding: 0px 0px;
     margin-top: -8px;
+}
+.active{
+    border-bottom: 2px solid #5392F9;
+    cursor: pointer;
+    padding: 0.4px;
+    font-size: 19px;
+    font-weight: 400;
 }
 /* .lineStepper {
     position: relative;
