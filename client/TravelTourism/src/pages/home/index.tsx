@@ -1,7 +1,7 @@
 import './index.css';
 import Header from '../../shared-components/header';
 import SliderCarousal from './slick-carousal';
-import { MapPin, ChevronDown, ChevronUp, CalendarDays, Search } from 'lucide-react';
+import { MapPin, CalendarDays, Search } from 'lucide-react';
 import DatePicker from "react-datepicker";
 import Footer from '../../shared-components/footer';
 import { useState } from 'react';
@@ -26,14 +26,59 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
-   const [isView, setIsView] = useState(false);
-   const [isShow, setIsShow] = useState(false);
+   const navigate = useNavigate();
    const [isOpen, setIsOpen] = useState(false)
    const [startDate, setStartDate] = useState(new Date());
 
-   
+   const [submit, setSubmit] = useState({
+      flyingfrom: '',
+      flyingto: '',
+      traveldate: '',
+      error: {
+         dataError: '',
+      }
+   })
+
+   const handleChange = (e: { target: { name: string; value: string; } }) => {
+      const { name, value } = e.target;
+      setSubmit((prevalue) => (
+         {
+            ...prevalue,
+            [name]: value,
+         }
+      ));
+   };
+
+   const handleSubmit = (e: { preventDefault: () => void; }) => {
+      e.preventDefault();
+      const { flyingfrom, flyingto, traveldate } = submit;
+      const errors = {
+         dataError: '',
+      }
+      let hasErrors = false;
+
+      if (!flyingfrom || !flyingto || traveldate) {
+         errors.dataError = 'All field are required';
+         hasErrors = true;
+      }
+
+      if (hasErrors) {
+         alert(errors.dataError);
+      } else {
+         navigate('/airlines', { state: { flyingform: submit.flyingfrom, flyingto: submit.flyingto, traveldate: JSON.stringify(startDate), } })
+         setSubmit({
+            flyingfrom: '',
+            flyingto: '',
+            traveldate: '',
+            error: { dataError: '' }
+         });
+         alert('Data submitted successfully');
+      }
+   }
+
    return (
       <>
          <Header />
@@ -45,79 +90,68 @@ const Home = () => {
                   <div className="row justify-content-center">
                      <div className="col-xxl-9 col-xl-10 col-lg-11">
                         <div className='bookingLayer'>
-                           <div className="row">
-                              <div className="col-lg-3 col-md-12 col-sm-12 col-12">
-                                 <div className='d-flex align-items-center gap-3'>
-                                    <div className='search-icon-bg'>
-                                       <span className='locateIcon'>
-                                          <MapPin />
-                                       </span>
+                           <form action="/action.php" method="post" onSubmit={handleSubmit}>
+                              <div className="row">
+                                 <div className="col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div className='d-flex align-items-center justify-content-center gap-3'>
+                                       <div className='search-icon-bg'>
+                                          <span className='locateIcon'>
+                                             <MapPin />
+                                          </span>
+                                       </div>
+                                       <div className='banner-select'>
+                                          <p className='innerTextInfo mb-2'>Flying from</p>
+                                          <div className='nice-select'>
+                                             <input type="search" name="flyingfrom" placeholder='Flying from' value={submit.flyingfrom} onChange={handleChange} id="flyingfrom" className='border-0' />
+                                          </div>
+                                       </div>
                                     </div>
-                                    <div className='banner-select'>
-                                       <p className='innerTextInfo mb-0'>Flying from</p>
-                                       <div className='nice-select'>
-                                          <span onClick={() => setIsView(!isView)}>Select Location {isView === false ? <ChevronUp className='mx-2' /> : <ChevronDown className='mx-2' />}</span>
-                                          {
-                                             isView && <ul className='countryList'>
-                                                <li className='option'><Link to="/" className='countryVisitLink'>Australia</Link></li>
-                                                <li className='option'><Link to="/" className='countryVisitLink'>Portugal</Link></li>
-                                                <li className='option'><Link to="/" className='countryVisitLink'>Maldives</Link></li>
-                                                <li className='option'><Link to="/" className='countryVisitLink'>India</Link></li>
-                                             </ul>
-                                          }
-
+                                 </div>
+                                 <div className="col-lg-4">
+                                    <div className='d-flex align-items-center justify-content-center gap-3'>
+                                       <div className='search-icon-bg'>
+                                          <span className='locateIcon'>
+                                             <MapPin />
+                                          </span>
+                                       </div>
+                                       <div className='banner-select'>
+                                          <p className='innerTextInfo mb-2'>Flying to</p>
+                                          <div className='nice-select'>
+                                             <input type="search" name="flyingto" placeholder='Flying to' value={submit.flyingto} onChange={handleChange} id="flyingto" className='border-0' />
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div className="col-lg-4">
+                                    <div className='d-flex align-items-center justify-content-center gap-3'>
+                                       <div className='banner-select'>
+                                          <p className='innerTextInfo mb-2'>Duration</p>
+                                          <div className='date-picker-container'>
+                                             <DatePicker
+                                                selected={startDate}
+                                                placeholderText='Enter Date'
+                                                onChange={(date) => {
+                                                   setStartDate(date)
+                                                }}
+                                                open={isOpen}
+                                                onInputClick={() => setIsOpen(!isOpen)}
+                                                className="date-input p-2"
+                                             />
+                                             <CalendarDays className="calendar-icon" />
+                                          </div>
                                        </div>
                                     </div>
                                  </div>
                               </div>
-                              <div className="col-lg-3">
-                                 <div className='d-flex align-items-center gap-3'>
-                                    <div className='search-icon-bg'>
-                                       <span className='locateIcon'>
-                                          <MapPin />
-                                       </span>
-                                    </div>
-                                    <div className='banner-select'>
-                                       <p className='innerTextInfo mb-0'>Flying to</p>
-                                       <div className='nice-select'>
-                                          <span onClick={() => setIsShow(!isShow)}>Select Location {isShow === false ? <ChevronUp className='mx-2' /> : <ChevronDown className='mx-2' />}</span>
-                                          {
-                                             isShow && <ul className='countryList'>
-                                                <li className='option'><Link to="/" className='countryVisitLink'>Australia</Link></li>
-                                                <li className='option'><Link to="/" className='countryVisitLink'>Portugal</Link></li>
-                                                <li className='option'><Link to="/" className='countryVisitLink'>Maldives</Link></li>
-                                                <li className='option'><Link to="/" className='countryVisitLink'>India</Link></li>
-                                             </ul>
-                                          }
-
-                                       </div>
-                                    </div>
+                              <div className="row align-items-center justify-content-center">
+                                 <div className="col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <button type='submit' className='boxWrapper'>
+                                       <Search style={{ color: "#ffffff", fontSize: "10px", width: "20px" }} />
+                                       <span className='searchText'>Search</span>
+                                    </button>
                                  </div>
                               </div>
-                              <div className="col-lg-3">
-                                 <div className='d-flex align-items-center gap-3'>
-                                    <div className='banner-select'>
-                                       <p className='innerTextInfo mb-0'>Duration</p>
-                                       <div className='date-picker-container'>
-                                          <DatePicker
-                                             selected={startDate}
-                                             onChange={(date) => setStartDate(date)}
-                                             open={isOpen}
-                                             onInputClick={() => setIsOpen(!isOpen)}
-                                             className="date-input"
-                                          />
-                                          <CalendarDays className="calendar-icon" />
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div className="col-lg-3">
-                                 <button type='submit' className='boxWrapper'>
-                                    <Search style={{ color: "#ffffff", fontSize: "10px", width: "20px" }} />
-                                    <span className='searchText'>Search</span>
-                                 </button>
-                              </div>
-                           </div>
+                           </form>
                         </div>
                      </div>
                   </div>

@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     list-style-type: none;
 }
 
-.outerBox{
+.outerBox {
     background-color: var(--white);
     width: 100%;
     font-weight: 700;
@@ -13,85 +13,91 @@
     position: relative;
     z-index: 9999;
 }
-.linkLogo{
+
+.linkLogo {
     text-decoration: none;
     color: var(--black);
     font-size: 30px;
     font-weight: 600;
 }
-.outerBox .InnerOuterWrapper{
+
+.outerBox .InnerOuterWrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.outerBox .logo span{
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--dark);
+.outerBox .logo span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--dark);
 }
 
-.outerBox .innerMenuList ul{
+.outerBox .innerMenuList ul {
     text-align: center;
     display: flex;
     align-items: center;
     margin-bottom: 0rem;
 }
 
-.outerBox .innerMenuList ul li{
-    text-align: center; 
+.outerBox .innerMenuList ul li {
+    text-align: center;
     display: inline-block;
     margin: 0rem 1rem;
 }
 
-.outerBox .innerMenuList ul li ul{
-   background-color: var(--white);
-   font-weight: 400;
-   filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 7px);
-   position: fixed;
-   box-shadow: #cbcbcb 0 4px 8px 0;
-   display: block;
-   border-radius: 8px;
-   padding: 0.9rem;
-  margin-top: 1rem;
+.outerBox .innerMenuList ul li ul {
+    background-color: var(--white);
+    font-weight: 400;
+    filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 7px);
+    position: fixed;
+    box-shadow: #cbcbcb 0 4px 8px 0;
+    display: block;
+    border-radius: 8px;
+    padding: 0.9rem;
+    margin-top: 1rem;
 }
 
-.outerBox .innerMenuList ul li ul li{
+.outerBox .innerMenuList ul li ul li {
     display: block;
     margin: 1.1rem 0rem;
     text-align: left;
 }
 
-.outerBox .innerMenuList ul li ul li .subMenuLink{
-   text-decoration: none;
-   color: var(--black);
-   font-weight: 500;
+.outerBox .innerMenuList ul li ul li .subMenuLink {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 500;
 }
 
-.outerBox .innerMenuList ul li ul .subMenuLink:hover{
+.outerBox .innerMenuList ul li ul .subMenuLink:hover {
     color: var(--blue);
     font-weight: 500;
 }
 
-.outerBox .innerMenuList ul li .linkMenu{
+.outerBox .innerMenuList ul li .linkMenu {
     font-size: 1rem;
     color: var(--black);
     font-weight: 500;
     text-decoration: none;
 }
 
-.outerBox .innerMenuList ul li .linkMenu:hover{
+.outerBox .innerMenuList ul li .linkMenu:hover {
     color: var(--blue);
     font-weight: 600;
 }
 
-.outerBox .createAccount{
+.outerBox .createAccount {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.outerBox .createAccount .user1{
+.outerBox .mobileIcon .mobileCreateAccount {
+    display: none;
+}
+
+.outerBox .createAccount .user1 {
     font-size: 1rem;
     color: var(--blue);
     font-weight: 400;
@@ -101,14 +107,14 @@
     text-decoration: none;
 }
 
-.outerBox .createAccount .user1:hover{
-   background-color: var(--blue);
-   color: var(--white);
-   border: none;
-   padding: 0.6rem 0.8rem;
+.outerBox .createAccount .user1:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 0.8rem;
 }
 
-.outerBox .createAccount .user2{
+.outerBox .createAccount .user2 {
     font-size: 1rem;
     color: var(--blue);
     font-weight: 400;
@@ -119,11 +125,142 @@
     text-decoration: none;
 }
 
-.outerBox .createAccount .user2:hover{
+.outerBox .createAccount .user2:hover {
     background-color: var(--blue);
     color: var(--white);
     border: none;
 }
-@media(maxWiidth:1440px){
-    
+
+.outerBox .mobileIcon {
+    display: none;
+}
+
+.outerBox .InnerOuterWrapper .innerMenuList .mobilecross {
+    display: none;
+}
+
+.outerBox .InnerOuterWrapper .mobilehamburger {
+    display: none;
+}
+
+@media(max-Width:991px) {
+    .outerBox .mobileIcon {
+        display: block;
+    }
+
+    .outerBox .mobileIcon .mobileCreateAccount {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0rem;
+        box-shadow: 0px 3px 6px #00000029;
+        padding: 1rem;
+        z-index: 1000;
+        position: absolute;
+        border-radius: 8px;
+        background-color: var(--white);
+        right: 5%;
+        margin-top: 0.6rem;
+    }
+
+    .outerBox .mobileIcon .mobileCreateAccount .user1 {
+        font-size: 1rem;
+        color: var(--blue);
+        font-weight: 400;
+        cursor: pointer;
+        padding: 0.7rem 0.8rem;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    .outerBox .mobileIcon .mobileCreateAccount .user1:hover {
+        background-color: var(--blue);
+        color: var(--white);
+        border: none;
+        padding: 0.6rem 0.8rem;
+    }
+
+    .outerBox .mobileIcon .mobileCreateAccount .user2 {
+        font-size: 1rem;
+        color: var(--blue);
+        font-weight: 400;
+        border: 1px solid var(--blue);
+        padding: 0.6rem 0.8em;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .outerBox .mobileIcon .mobileCreateAccount .user2:hover {
+        background-color: var(--blue);
+        color: var(--white);
+        border: none;
+    }
+
+    .outerBox .createAccount {
+        display: none;
+    }
+
+    .outerBox .innerMenuList ul {
+        position: fixed;
+        width: 100%;
+        display: block;
+        height: 100vh;
+        background-color: var(--blue);
+        top: 75px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        padding-top: 50px;
+    }
+
+    .outerBox .innerMenuList ul li {
+        display: block;
+        line-height: 60px;
+    }
+
+    .outerBox .innerMenuList ul.responsive_nav {
+        left: 0px;
+    }
+
+    .outerBox .innerMenuList ul li .linkMenu {
+        color: var(--white);
+    }
+
+    .outerBox .innerMenuList ul li ul {
+        background-color: var(--blue);
+        color: var(--white);
+        font-weight: 400;
+        filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 2px 7px);
+        position: fixed;
+        box-shadow: #cbcbcb 0 4px 8px 0;
+        display: block;
+        border-radius: 0px;
+        padding: 0.9rem;
+        left: 0;
+        top: 58px;
+        width: 100%;
+        bottom: 0px;
+    }
+
+    .outerBox .innerMenuList ul li ul li {
+        display: block;
+        margin: 1.1rem 0rem;
+        text-align: center;
+    }
+
+    .outerBox .InnerOuterWrapper .innerMenuList .mobilecross {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 30px;
+    }
+
+    .outerBox .innerMenuList ul li ul li .subMenuLink {
+        color: var(--white);
+    }
+
+    .outerBox .InnerOuterWrapper .mobilehamburger {
+        display: block;
+    }
 }

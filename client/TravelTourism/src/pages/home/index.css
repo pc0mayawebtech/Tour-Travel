@@ -15,7 +15,7 @@ body {
 
 .bannerBooking {
   position: absolute;
-  bottom: 1.2rem;
+  bottom: 0rem;
   width: 100%;
   z-index: 9999;
 }
@@ -27,7 +27,7 @@ body {
   border-radius: 10px;
   padding: 1rem;
   position: sticky;
-  height: 80px;
+  height: 150px;
 }
 
 .search-icon-bg .locateIcon {
@@ -62,34 +62,17 @@ body {
   height: 0;
   line-height: 0;
   cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
   font-weight: 400;
 }
 
-.banner-select .nice-select .countryList {
-  background-color: var(--white);
-  position: relative;
-  top: 0.8rem;
+.banner-select .nice-select input[type='search'] {
+  border: 0px;
+  font-size: 0.9rem;
+  padding: 0.7rem 1rem;
+  width: 100%;
   border-radius: 8px;
-  box-shadow: #cbcbcb 0 4px 8px 0;
-  padding-left: 1rem;
-  height: 28vh;
-}
-
-.banner-select .nice-select .countryList .option {
-  cursor: pointer;
-  line-height: 2.5;
-  list-style: none;
-  outline: none;
-  text-align: left;
-  transition: all 0.2s;
-}
-
-.banner-select .nice-select .countryList .option .countryVisitLink {
-  text-decoration: none;
-  color: var(--grey);
-  font-weight: 400;
-  text-align: left;
-  font-size: 1rem;
 }
 
 .banner-select .nice-select input {
@@ -142,6 +125,7 @@ body {
   border: none;
   outline: none;
   padding: 0.9rem;
+  margin-top: 2.3rem;
 }
 
 .bannerBooking .bookingLayer .boxWrapper:hover {
@@ -327,11 +311,9 @@ body {
 
 .TripTour .logoWarpper:hover::after {
   opacity: 0.8;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 108, 228, 0),
-    rgba(0, 108, 228, 0.75)
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 108, 228, 0),
+      rgba(0, 108, 228, 0.75));
 }
 
 .TripTour .logoWarpper:hover .abtTour {
@@ -344,11 +326,9 @@ body {
 
 .TripTour .logoWarpper::after {
   opacity: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 108, 228, 0),
-    rgba(0, 108, 228, 0.75)
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 108, 228, 0),
+      rgba(0, 108, 228, 0.75));
   position: absolute;
   content: "";
   display: block;
