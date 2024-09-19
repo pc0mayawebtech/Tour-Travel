@@ -27,11 +27,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { Autoplay } from 'swiper/modules';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import SearchResult from './result-filter';
 
 const Home = () => {
    const navigate = useNavigate();
    const [isOpen, setIsOpen] = useState(false)
    const [startDate, setStartDate] = useState(new Date());
+   const [fromResults, setFromResults] = useState([]);
+   const [toResults, setToResults] = useState([]);
 
    const [submit, setSubmit] = useState({
       flyingfrom: '',
@@ -42,7 +46,7 @@ const Home = () => {
       }
    })
 
-   const handleChange = (e: { target: { name: string; value: string; } }) => {
+   const handleChange = async (e: { target: { name: string; value: string; } }) => {
       const { name, value } = e.target;
       setSubmit((prevalue) => (
          {
@@ -50,6 +54,26 @@ const Home = () => {
             [name]: value,
          }
       ));
+      if (name === 'flyingfrom') {
+         const results = await fetchSuggestions(value);
+         setFromResults(results);
+      } else if (name === 'flyingto') {
+         const results = await fetchSuggestions(value);
+         setToResults(results);
+      }
+   };
+
+   const fetchSuggestions = async (query: string) => {
+      try {
+         const result = await axios.get('http://localhost:3000/home');
+         const filtered = result.data.users.filter((user: { code: string; }) =>
+            user.code.toLowerCase().includes(query.toLowerCase())
+         );
+         return filtered;
+      } catch (error) {
+         console.error('Error fetching data:', error);
+         return [];
+      }
    };
 
    const handleSubmit = (e: { preventDefault: () => void; }) => {
@@ -103,6 +127,13 @@ const Home = () => {
                                           <p className='innerTextInfo mb-2'>Flying from</p>
                                           <div className='nice-select'>
                                              <input type="search" name="flyingfrom" placeholder='Flying from' value={submit.flyingfrom} onChange={handleChange} id="flyingfrom" className='border-0' />
+                                             {fromResults.length > 0 && (
+                                                <SearchResult
+                                                   result={fromResults}
+                                                   setSubmit={setSubmit}
+                                                   fieldName="flyingfrom"
+                                                />
+                                             )}
                                           </div>
                                        </div>
                                     </div>
@@ -118,6 +149,13 @@ const Home = () => {
                                           <p className='innerTextInfo mb-2'>Flying to</p>
                                           <div className='nice-select'>
                                              <input type="search" name="flyingto" placeholder='Flying to' value={submit.flyingto} onChange={handleChange} id="flyingto" className='border-0' />
+                                             {toResults.length > 0 && (
+                                                <SearchResult
+                                                   result={toResults}
+                                                   setSubmit={setSubmit}
+                                                   fieldName="flyingto"
+                                                />
+                                             )}
                                           </div>
                                        </div>
                                     </div>

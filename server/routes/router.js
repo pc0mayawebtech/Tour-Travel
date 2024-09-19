@@ -1,10 +1,10 @@
 import express from 'express';
 import userdb from '../models/userSchema.js';
 import userdb2 from '../models/userContactSchema.js';
+import userflight from '../models/userFlightCodeSchema.js';
 import nodemailer from 'nodemailer';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
-import Razorpay from 'razorpay';
 
 const router = express.Router();
 
@@ -178,58 +178,16 @@ router.post('/contact', async (req, res) => {
 });
 
 
-//Payment Gateway API
-router.post('/orders', async (req, res) => {
-    const razorpay = new Razorpay({
-        key_id: "",
-        key_secret: "",
-    })
-
-    const options = {
-        amount: req.body.amount,
-        currency: req.body.currency,
-        receipt: "receipt#1",
-        payment_capture: 1,
-    }
-
+//Flight Code API 
+router.get('/home', async (req, res) => {
     try {
-        const response = await razorpay.orders.create(options);
-
-        res.json({
-            order_id: response.id,
-            currency: response.currency,
-            amount: response.amount
-        })
+        const users = await userflight.find();
+        return res.status(200).json({ status: 200, users });
     } catch (error) {
-        res.status(500).send('Internal Server Error');
+        console.log("flightcode error", error);
+        return res.status(500).json({ error: "Internal server error" });
     }
 });
-
-// app.get('/payment/:paymentId', async (req, res) => {
-//     const { paymentId } = req.params;
-
-//     const razorpay = new Razorpay({
-//         key_id: "",
-//         key_secret: "",
-//     })
-
-//     try {
-//         const payment = await razorpay.payments.fetch(paymentId);
-//         if (!payment) {
-//             return res.status(500).json('Error at razorpay loading');
-//         }
-
-//         res.json({
-//             status: payment.status,
-//             method: payment.method,
-//             amount: payment.amount,
-//             currency: payment.currency
-//         })
-//     }
-//     catch (error) {
-//         res.status(500).send('failed to fetch');
-//     }
-// })
 
 
 export default router;
