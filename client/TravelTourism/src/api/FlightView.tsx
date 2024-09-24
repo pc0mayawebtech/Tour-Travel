@@ -1,13 +1,13 @@
 import axios from "axios";
 
 type UserData = {
-    flyingform: string;
-    flyingto: string;
+    flyingfromCode: string;
+    flyingtoCode: string;
     traveldate: string;
 }
-const FlightView = async ({ flyingform, flyingto, traveldate }: UserData) => {
+const FlightView = async ({ flyingfromCode, flyingtoCode, traveldate }: UserData) => {
     const formattedDate = traveldate.slice(1, 11);
-    console.log({ flyingform, flyingto, formattedDate }, "api called main")
+    console.log({ flyingfromCode, flyingtoCode, formattedDate }, "api called main")
 
     try {
         const response = await axios.post(
@@ -23,10 +23,10 @@ const FlightView = async ({ flyingform, flyingto, traveldate }: UserData) => {
                     routeInfos: [
                         {
                             fromCityOrAirport: {
-                                code: flyingform,
+                                code: flyingfromCode,
                             },
                             toCityOrAirport: {
-                                code: flyingto,
+                                code: flyingtoCode,
                             },
                             travelDate: formattedDate,
                         },
@@ -45,8 +45,8 @@ const FlightView = async ({ flyingform, flyingto, traveldate }: UserData) => {
             }
         );
         return response;
-    } catch (error: any) {
-        console.error('Error:', error.response ? error.response.data : error.message);
+    } catch (error) {
+        console.error('Error:', error);
     }
 }
 

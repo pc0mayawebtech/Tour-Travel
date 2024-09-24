@@ -4,7 +4,7 @@ import SliderCarousal from './slick-carousal';
 import { MapPin, CalendarDays, Search } from 'lucide-react';
 import DatePicker from "react-datepicker";
 import Footer from '../../shared-components/footer';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "react-datepicker/dist/react-datepicker.css";
 import OfferChoose from './choose-offer';
@@ -39,14 +39,15 @@ const Home = () => {
 
    const [submit, setSubmit] = useState({
       flyingfrom: '',
+      flyingfromCode: '',
       flyingto: '',
+      flyingtoCode: '',
       traveldate: '',
-      error: {
-         dataError: '',
-      }
+      error: { dataError: '' }
    })
 
-   const handleChange = async (e: { target: { name: string; value: string; } }) => {
+   let debounceTimer: number | undefined;
+   const handleChange = (e: { target: { name: string; value: string; } }) => {
       const { name, value } = e.target;
       setSubmit((prevalue) => (
          {
@@ -54,13 +55,19 @@ const Home = () => {
             [name]: value,
          }
       ));
-      if (name === 'flyingfrom') {
-         const results = await fetchSuggestions(value);
-         setFromResults(results);
-      } else if (name === 'flyingto') {
-         const results = await fetchSuggestions(value);
-         setToResults(results);
+      if (debounceTimer) {
+         clearTimeout(debounceTimer);
       }
+
+      debounceTimer = setTimeout(async () => {
+         if (name === 'flyingfrom') {
+            const results = await fetchSuggestions(value);
+            setFromResults(results);
+         } else if (name === 'flyingto') {
+            const results = await fetchSuggestions(value);
+            setToResults(results);
+         }
+      }, 2000);
    };
 
    const fetchSuggestions = async (query: string) => {
@@ -78,13 +85,13 @@ const Home = () => {
 
    const handleSubmit = (e: { preventDefault: () => void; }) => {
       e.preventDefault();
-      const { flyingfrom, flyingto, traveldate } = submit;
+      const { flyingfromCode, flyingtoCode, traveldate } = submit;
       const errors = {
          dataError: '',
       }
       let hasErrors = false;
 
-      if (!flyingfrom || !flyingto || traveldate) {
+      if (!flyingfromCode || !flyingtoCode || traveldate) {
          errors.dataError = 'All field are required';
          hasErrors = true;
       }
@@ -92,16 +99,18 @@ const Home = () => {
       if (hasErrors) {
          alert(errors.dataError);
       } else {
-         navigate('/airlines', { state: { flyingform: submit.flyingfrom, flyingto: submit.flyingto, traveldate: JSON.stringify(startDate), } })
+         navigate('/airlines', { state: { flyingform: submit.flyingfrom, flyingto: submit.flyingto, traveldate: JSON.stringify(startDate), flyingfromCode: submit.flyingfromCode, flyingtoCode: submit.flyingtoCode, } })
          setSubmit({
             flyingfrom: '',
+            flyingfromCode: '',
             flyingto: '',
+            flyingtoCode: '',
             traveldate: '',
             error: { dataError: '' }
          });
          alert('Data submitted successfully');
-      }
-   }
+      };
+   };
 
    return (
       <>
