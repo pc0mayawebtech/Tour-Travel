@@ -4,7 +4,7 @@ import SliderCarousal from './slick-carousal';
 import { MapPin, CalendarDays, Search } from 'lucide-react';
 import DatePicker from "react-datepicker";
 import Footer from '../../shared-components/footer';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "react-datepicker/dist/react-datepicker.css";
 import OfferChoose from './choose-offer';
@@ -36,6 +36,7 @@ const Home = () => {
    const [startDate, setStartDate] = useState(new Date());
    const [fromResults, setFromResults] = useState([]);
    const [toResults, setToResults] = useState([]);
+   const [isDropdownVisible, setIsDropdownVisible] = useState(true);
 
    const [submit, setSubmit] = useState({
       flyingfrom: '',
@@ -55,6 +56,7 @@ const Home = () => {
             [name]: value,
          }
       ));
+      setIsDropdownVisible(true);
       if (debounceTimer) {
          clearTimeout(debounceTimer);
       }
@@ -141,6 +143,8 @@ const Home = () => {
                                                    result={fromResults}
                                                    setSubmit={setSubmit}
                                                    fieldName="flyingfrom"
+                                                   setIsDropdownVisible={setIsDropdownVisible}
+                                                   isDropdownVisible={isDropdownVisible}
                                                 />
                                              )}
                                           </div>
@@ -163,6 +167,8 @@ const Home = () => {
                                                    result={toResults}
                                                    setSubmit={setSubmit}
                                                    fieldName="flyingto"
+                                                   setIsDropdownVisible={setIsDropdownVisible}
+                                                   isDropdownVisible={isDropdownVisible}
                                                 />
                                              )}
                                           </div>
