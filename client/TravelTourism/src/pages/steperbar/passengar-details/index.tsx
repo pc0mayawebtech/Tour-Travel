@@ -76,7 +76,8 @@ const PassengerDetail = ({ handlNext }) => {
                     mnumber: '',
                     email: '',
                 }
-            })
+            });
+            handlNext();
         }
         else {
             setInputVal(prevState => ({ ...prevState, error: errors }));
@@ -90,7 +91,7 @@ const PassengerDetail = ({ handlNext }) => {
                         <div className="row align-items-center justify-content-center">
                             <div className="col-lg-8">
                                 <div className='formOuterBox'>
-                                    <form action="./action.php" method='post' onSubmit={handleSubmit}>
+                                    <form method='post' onSubmit={handleSubmit}>
                                         <div>
                                             <p className='conDetail'>Contact Details</p>
                                             <p className='ticketSent'>This is where your E-ticket will be sent</p>
@@ -116,7 +117,7 @@ const PassengerDetail = ({ handlNext }) => {
                                             <p style={{ color: "red", fontSize: "0.8rem", textAlign: "start", marginTop: "-10px", marginBottom: "0.5rem" }}>{inputVal.error.email}</p>
                                         </div>
                                         <div className='formOuterWrapper mt-2'>
-                                            <button type="submit" onClick={handlNext} className='btn btn btn-primary p-2 d-block m-auto'>Continue to Payment</button>
+                                            <button type="submit" className='btn btn btn-primary p-2 d-block m-auto'>Continue to Payment</button>
                                         </div>
                                     </form>
                                 </div>

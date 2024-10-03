@@ -59,3 +59,81 @@
     font-weight: 600;
     color: var(--red);
 }
+
+.backWrapper .flightViewDetail {
+    width: 70px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.backWrapper .flightViewDetail .flightdate {
+    font-size: 0.9rem;
+    color: var(--grey);
+    font-weight: 400;
+}
+
+.backWrapper .spaceLine .a95dc-text-inherit {
+    color: var(--grey);
+    font-weight: 600;
+}
+
+.backWrapper .spaceLine .a95dc-fill-inherit {
+    color: var(--grey);
+    font-weight: 600;
+}
+
+.backWrapper .spaceLine .a95dc-bg-deprecated-neutral-5 {
+    color: #a8b3cb;
+    font-weight: 500;
+}
+
+.backWrapper .spaceLine .a95dc-h-full {
+    height: 100%;
+}
+
+.backWrapper .spaceLine .jBFffN {
+    fill: rgb(107, 115, 136);
+    min-width: 12px;
+    min-height: 12px;
+    max-width: 12px;
+    max-height: 12px;
+}
+
+.backWrapper .detailsData {
+    display: flex;
+    gap: 0.7rem;
+    flex-direction: column;
+}
+
+.backWrapper .detailsData .flightName {
+    color: var(--grey);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.backWrapper .detailsData .airportname {
+    color: var(--black);
+    font-weight: 400;
+}
+
+.backWrapper .selectbtn {
+    background-color: var(--blue);
+    font-weight: 600;
+    color: var(--white);
+    padding: 0.6rem 0.9rem;
+    outline: none;
+    border: none;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    width: 20%;
+}
+
+.backWrapper .innerSubtn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    font-weight: 600;
+}

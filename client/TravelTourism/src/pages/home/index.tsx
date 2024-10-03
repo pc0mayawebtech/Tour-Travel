@@ -1,5 +1,7 @@
 import './index.css';
 import Header from '../../shared-components/header';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import SliderCarousal from './slick-carousal';
 import { MapPin, CalendarDays, Search } from 'lucide-react';
 import DatePicker from "react-datepicker";
@@ -69,14 +71,14 @@ const Home = () => {
             const results = await fetchSuggestions(value);
             setToResults(results);
          }
-      }, 2000);
+      }, 300);
    };
 
    const fetchSuggestions = async (query: string) => {
       try {
          const result = await axios.get('http://localhost:3000/home');
-         const filtered = result.data.users.filter((user: { code: string; }) =>
-            user.code.toLowerCase().includes(query.toLowerCase())
+         const filtered = result.data.users.filter((user: { city: string; }) =>
+            user.city.toLowerCase().includes(query.toLowerCase())
          );
          return filtered;
       } catch (error) {
@@ -86,6 +88,24 @@ const Home = () => {
    };
 
    const handleSubmit = (e: { preventDefault: () => void; }) => {
+      const notify = () => {
+         toast.success('Data submitted successfully', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+         })
+      };
+      const errorNotify = () => {
+         toast.error(errors.dataError, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+         })
+      };
       e.preventDefault();
       const { flyingfromCode, flyingtoCode, traveldate } = submit;
       const errors = {
@@ -99,7 +119,7 @@ const Home = () => {
       }
 
       if (hasErrors) {
-         alert(errors.dataError);
+         errorNotify();
       } else {
          navigate('/airlines', { state: { flyingform: submit.flyingfrom, flyingto: submit.flyingto, traveldate: JSON.stringify(startDate), flyingfromCode: submit.flyingfromCode, flyingtoCode: submit.flyingtoCode, } })
          setSubmit({
@@ -110,7 +130,7 @@ const Home = () => {
             traveldate: '',
             error: { dataError: '' }
          });
-         alert('Data submitted successfully');
+         notify();
       };
    };
 
