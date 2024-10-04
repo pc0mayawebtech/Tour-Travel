@@ -53,7 +53,7 @@ const FlightInfo = () => {
 
     const handleToggle = (id: number) => {
         console.log(id)
-        setExpandedId(expandedId === id ? -1 : id);
+        setExpandedId(expandedId === id ? null : id);
     };
 
     return (
