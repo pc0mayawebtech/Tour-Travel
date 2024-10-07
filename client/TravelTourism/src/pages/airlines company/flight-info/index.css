@@ -130,10 +130,18 @@
     width: 20%;
 }
 
-.backWrapper .innerSubtn{
+.backWrapper .innerSubtn {
     outline: none;
     border: none;
     background-color: transparent;
     color: var(--white);
+    font-weight: 600;
+}
+
+.noFlightMessage .innerTextData {
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    color: var(--blue);
     font-weight: 600;
 }

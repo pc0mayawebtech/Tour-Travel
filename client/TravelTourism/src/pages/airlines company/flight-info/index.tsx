@@ -11,7 +11,6 @@ import Loader from '../../loader';
 const FlightInfo = () => {
     const location = useLocation();
     const formData = location.state || {};
-    console.log(formData, 'heydta');
     const [response, setResponse] = useState([]);
     const [loader, setLoader] = useState(false);
     const [expandedId, setExpandedId] = useState<number | null>(0);
@@ -27,7 +26,7 @@ const FlightInfo = () => {
             console.error('Error fetching flight data:', error);
             setLoader(false);
         }
-    }
+    };
 
     useEffect(() => {
         flightData();
@@ -52,15 +51,14 @@ const FlightInfo = () => {
     const formattedDate = `${day} ${monthName}`;
 
     const handleToggle = (id: number) => {
-        console.log(id)
         setExpandedId(expandedId === id ? null : id);
     };
 
     return (
         <div className="col-lg-9">
             {loader ? (<Loader />) : (
-                response?.searchResult?.tripInfos?.ONWARD?.map((item: any) => {
-                    return (
+                response?.searchResult?.tripInfos?.ONWARD?.length > 0 ? (
+                    response?.searchResult?.tripInfos?.ONWARD?.map((item: any) => (
                         <div className='backWrapper mb-4' key={item?.sI?.[0]?.id}>
                             <div className="flightOuterWrapper">
                                 <div className='d-flex align-items-center gap-3 w-25'>
@@ -148,11 +146,16 @@ const FlightInfo = () => {
                                 </div>
                             )}
                         </div>
-                    );
-                })
+                    ))
+                ) : (
+                    <div className='noFlightMessage'>
+                        <p className='innerTextData'>No flights are available for the selected route and date.</p>
+                    </div>
+                )
             )}
         </div>
     );
 };
+
 
 export default FlightInfo;

@@ -5,9 +5,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import SliderCarousal from './slick-carousal';
 import { MapPin, CalendarDays, Search } from 'lucide-react';
 import DatePicker from "react-datepicker";
-import Footer from "../../shared-components/footer";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import Footer from '../../shared-components/footer';
+import { useState } from 'react';
+import { Link} from 'react-router-dom';
 import "react-datepicker/dist/react-datepicker.css";
 import OfferChoose from "./choose-offer";
 import homeabout from "../../../public/Images/homeaboutlogo.png";
@@ -101,7 +101,7 @@ const fetchSuggestions = async (query: string) => {
 
    const handleSubmit = (e: { preventDefault: () => void; }) => {
       const notify = () => {
-         toast.success('Data submitted successfully', {
+         toast.success('Data Fetching Successfully', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -133,7 +133,7 @@ const fetchSuggestions = async (query: string) => {
       if (hasErrors) {
          errorNotify();
       } else {
-         navigate('/airlines', { state: { flyingform: submit.flyingfrom, flyingto: submit.flyingto, traveldate: JSON.stringify(startDate), flyingfromCode: submit.flyingfromCode, flyingtoCode: submit.flyingtoCode, } })
+         navigate('/airlines', { state: { flyingform: submit.flyingfrom, flyingto: submit.flyingto, traveldate: JSON.stringify(startDate), flyingfromCode: submit.flyingfromCode, flyingtoCode: submit.flyingtoCode, }, replace: true });
          setSubmit({
             flyingfrom: '',
             flyingfromCode: '',
