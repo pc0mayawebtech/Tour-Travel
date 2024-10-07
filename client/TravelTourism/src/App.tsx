@@ -22,6 +22,8 @@ import OurTrips from "./pages/OurTrips"
 import MoreTripDetails from "./pages/OurTrips/TripDetails"
 import Career from "./pages/Career"
 import StepperBar from "./pages/steperbar"
+import Buses from "./pages/Buses"
+import Flight from "./pages/Flight"
 const App = () => {
 
 
@@ -56,6 +58,8 @@ const App = () => {
         <Route path="/tourGuide" element={<TourGuide />} />
         <Route path="/trips" element={<OurTrips />} />
         <Route path="/tripDetails" element={<MoreTripDetails />} />
+        <Route path="/buses" element={<Buses/>}/>
+        <Route path="/flight" element={<Flight/>}/>
       </Routes>
       <ToastContainer />
     </>

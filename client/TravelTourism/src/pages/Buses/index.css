@@ -1,0 +1,6 @@
+.busBanner{
+    background-image: url('../../../public/Images/Buses/busbanner.jpg');
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+}

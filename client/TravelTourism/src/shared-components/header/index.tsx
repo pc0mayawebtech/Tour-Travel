@@ -36,8 +36,8 @@ const Header = () => {
                                 <li><Link to='' className='linkMenu' onClick={() => setIsView(!isView)}>Transport {isView === false ? <ChevronDown /> : <ChevronUp />}</Link>
                                     {
                                         isView && <ul>
-                                            <li><Link to="/" className='subMenuLink'>Flights</Link></li>
-                                            <li><Link to="/" className='subMenuLink'>Buses</Link></li>
+                                            <li><Link to="/flight" className='subMenuLink'>Flights</Link></li>
+                                            <li><Link to="/buses" className='subMenuLink'>Buses</Link></li>
                                             <li><Link to="/train" className='subMenuLink'>Trains</Link></li>
                                             <label className='mobilecross'>
                                                 <X size={25} onClick={() => setIsView(false)} />

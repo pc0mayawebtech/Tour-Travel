@@ -27,7 +27,7 @@ body {
   border-radius: 10px;
   padding: 1rem;
   position: sticky;
-  height: 150px;
+  height: 250px;
 }
 
 .search-icon-bg .locateIcon {
@@ -65,8 +65,42 @@ body {
   box-sizing: border-box;
   width: 100%;
   font-weight: 400;
+  width: 350px;
 }
 
+.bookingDropdown p{
+  font-weight: 400;
+  color: var(--grey);
+}
+.bookingDropdown{
+  width: 350px;
+  box-shadow: #cbcbcb 0 4px 8px 0;
+   border-radius: 10px;
+   padding: 10px 15px 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.bookingDropdownItem{
+  background-color: #fff;
+  margin-left: 50px;
+  border-radius: 10px;
+  box-shadow: #cbcbcb 0 4px 8px 0;
+  margin-top: 5px;
+  z-index: 1000;
+  position: absolute;
+}
+
+.bookingLayerTwo{
+  margin-top: 65px;
+  position: relative;
+}
+.boxWrapper {
+  position: relative;
+  z-index: 1; 
+}
 .banner-select .nice-select input[type='search'] {
   border: 0px;
   font-size: 0.9rem;
@@ -87,10 +121,29 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  width: 350px;
+  margin-left: 50px;
 }
 
+.calenderText{
+  margin-left: 50px;
+}
+
+.passengerText{
+  margin-left: 50px;
+}
+
+.dropDownButton{
+  background-color: #fff;
+  /* border: 1px solid #000; */
+  width: 350px;
+  margin-left: 50px;
+  box-shadow: #cbcbcb 0 4px 8px 0;
+}
+
+
 .date-input {
-  width: 100%;
+  width: 350px;
   padding: 5px 15px;
   font-size: 15px;
   border-radius: 5px;
@@ -128,6 +181,38 @@ body {
   margin-top: 2.3rem;
 }
 
+.dropDownMenu{
+  width: 350px;
+  text-align: center;
+  padding: 5px 15px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.dropDownMenuText{
+  align-items: center;
+  margin-top: 5%;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  color: var(--grey);
+}
+.totalPerson{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue);
+  margin-right: 8px;
+}
+
+
+
+.sign{
+  font-size: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--grey);
+}
 .bannerBooking .bookingLayer .boxWrapper:hover {
   background-color: var(--yellow);
   font-weight: 600;
@@ -139,6 +224,7 @@ body {
   font-weight: 600;
   border: none;
   outline: none;
+  
 }
 
 /**********WHY CHOOSE US**********/

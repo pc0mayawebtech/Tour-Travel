@@ -1,16 +1,16 @@
-import { popularRoute } from "../../constant/trainpopularroutemain";
-import Dashboard from "../../shared-components/Dashboard";
-import Footer from "../../shared-components/footer";
-import Header from "../../shared-components/header";
-import "./index.css";
-import Wheretogoprop from "./wheretogoprop";
-
-const Train = () => {
+import { popularRoute } from '../../constant/trainpopularroutemain'
+import Dashboard from '../../shared-components/Dashboard'
+import Footer from '../../shared-components/footer'
+import Header from '../../shared-components/header'
+import Wheretogoprop from '../Train/wheretogoprop'
+import './index.css'
+const Buses = () => {
   return (
     <div>
-      <Header />
-      <div className="trainBanner"></div>
-     <Dashboard/>
+      <Header/>
+      <div className="busBanner">
+      </div>
+      <Dashboard/>
       <section className="whereToGo container">
         <div className="whereToGoHeading">
           <p>Where to go</p>
@@ -88,7 +88,7 @@ const Train = () => {
       </section>
       <Footer/>
     </div>
-  );
-};
+  )
+}
 
-export default Train;
+export default Buses
