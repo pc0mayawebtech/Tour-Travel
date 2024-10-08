@@ -130,7 +130,7 @@ const Home = () => {
       if (hasErrors) {
          errorNotify();
       } else {
-         navigate('/airlines', { state: { flyingform: submit.flyingfrom, flyingto: submit.flyingto, traveldate: JSON.stringify(startDate), flyingfromCode: submit.flyingfromCode, flyingtoCode: submit.flyingtoCode, }, replace: true });
+         navigate('/airlines', { state: { flyingform: submit.flyingfrom, flyingto: submit.flyingto, traveldate: JSON.stringify(startDate), flyingfromCode: submit.flyingfromCode, flyingtoCode: submit.flyingtoCode, } });
          setSubmit({
             flyingfrom: '',
             flyingfromCode: '',
