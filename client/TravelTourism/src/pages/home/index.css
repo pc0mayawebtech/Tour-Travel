@@ -68,22 +68,23 @@ body {
   width: 350px;
 }
 
-.bookingDropdown p{
+.bookingDropdown p {
   font-weight: 400;
   color: var(--grey);
 }
-.bookingDropdown{
+
+.bookingDropdown {
   width: 350px;
   box-shadow: #cbcbcb 0 4px 8px 0;
-   border-radius: 10px;
-   padding: 10px 15px 0px 15px;
+  border-radius: 10px;
+  padding: 10px 15px 0px 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 50px;
 }
 
-.bookingDropdownItem{
+.bookingDropdownItem {
   background-color: #fff;
   margin-left: 50px;
   border-radius: 10px;
@@ -93,14 +94,16 @@ body {
   position: absolute;
 }
 
-.bookingLayerTwo{
+.bookingLayerTwo {
   margin-top: 65px;
   position: relative;
 }
+
 .boxWrapper {
   position: relative;
-  z-index: 1; 
+  z-index: 1;
 }
+
 .banner-select .nice-select input[type='search'] {
   border: 0px;
   font-size: 0.9rem;
@@ -125,15 +128,15 @@ body {
   margin-left: 50px;
 }
 
-.calenderText{
+.calenderText {
   margin-left: 50px;
 }
 
-.passengerText{
+.passengerText {
   margin-left: 50px;
 }
 
-.dropDownButton{
+.dropDownButton {
   background-color: #fff;
   /* border: 1px solid #000; */
   width: 350px;
@@ -181,16 +184,16 @@ body {
   margin-top: 2.3rem;
 }
 
-.dropDownMenu{
+.dropDownMenu {
   width: 350px;
   text-align: center;
   padding: 5px 15px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
 
-.dropDownMenuText{
+.dropDownMenuText {
   align-items: center;
   margin-top: 5%;
   font-size: 15px;
@@ -198,7 +201,8 @@ body {
   display: flex;
   color: var(--grey);
 }
-.totalPerson{
+
+.totalPerson {
   font-size: 18px;
   font-weight: 600;
   color: var(--blue);
@@ -207,12 +211,13 @@ body {
 
 
 
-.sign{
+.sign {
   font-size: 26px;
   font-weight: 600;
   cursor: pointer;
   color: var(--grey);
 }
+
 .bannerBooking .bookingLayer .boxWrapper:hover {
   background-color: var(--yellow);
   font-weight: 600;
@@ -224,7 +229,7 @@ body {
   font-weight: 600;
   border: none;
   outline: none;
-  
+
 }
 
 /**********WHY CHOOSE US**********/
@@ -514,6 +519,39 @@ body {
   font-size: 1rem;
   font-weight: 500;
   color: var(--grey);
+}
+
+.dropDownMenu .behindColor {
+  background-color: var(--white);
+  font-weight: 600;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.9rem;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  width: 150px;
+  font-size: 0.856rem;
+}
+
+.dropDownMenu .behindColor.activebehindColor {
+  background-color: var(--blue);
+  font-weight: 600;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--blue);
+  color: var(--white);
+  border-radius: 4px;
+  width: 150px;
+  font-size: 0.856rem;
+}
+
+.dropDownMenu .behindColor:hover {
+  background-color: rgb(135, 179, 251);
+  color: var(--white);
+  font-weight: 600;
+  transition: 0.15s ease-in-out;
 }
 
 
