@@ -516,6 +516,7 @@ body {
   color: var(--grey);
 }
 
+
 @media only screen and (max-width: 1024px) {
   .Testinomial {
     height: 95dvh;

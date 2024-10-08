@@ -40,7 +40,7 @@ const Home = () => {
   const [fromResults, setFromResults] = useState([]);
   const [toResults, setToResults] = useState([]);
   const [isDropdownVisible, setIsDropdownVisible] = useState(true);
-  const [adultValue, setAdultValue] = useState(0);
+  const [adultValue, setAdultValue] = useState(1);
   const [childValue, setChildValue] = useState(0);
   const [infantValue, setInfantValue] = useState(0);
   const [dropDown, setDropDown] = useState(false);
@@ -158,7 +158,12 @@ const fetchSuggestions = async (query: string) => {
   };
 
   const incrementAdult = () => {
-    setAdultValue(adultValue + 1);
+    if (adultValue >= 8){
+      setAdultValue(8);
+    }
+    else{
+      setAdultValue(adultValue + 1);
+    }
   };
   const decrementChild = () => {
     if (childValue <= 0) {
@@ -168,7 +173,12 @@ const fetchSuggestions = async (query: string) => {
     }
   };
   const incrementChild = () => {
-    setChildValue(childValue + 1);
+    if(childValue >=16 ){ 
+      setChildValue(16);
+     }
+     else {
+      setChildValue(childValue + 1)
+     }
   };
 
   const decrementInfants = () => {
@@ -180,7 +190,12 @@ const fetchSuggestions = async (query: string) => {
   };
 
   const incrementInfants = () => {
-    setInfantValue(infantValue + 1);
+    if (infantValue >= 8){
+      setInfantValue(8);
+    }
+    else{
+      setInfantValue(infantValue + 1);
+    }
   };
 
   return (
