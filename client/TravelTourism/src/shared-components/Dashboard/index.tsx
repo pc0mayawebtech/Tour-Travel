@@ -367,7 +367,7 @@ const Dashboard = () => {
                                   selected={startDate}
                                   placeholderText="Enter Date"
                                   onChange={(date) => {
-                                    setStartDate(date);
+                                    setStartDate(date?? new Date());
                                   }}
                                   open={isOpen}
                                   onInputClick={() => setIsOpen(!isOpen)}
