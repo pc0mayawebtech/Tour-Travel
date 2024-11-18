@@ -1,6 +1,6 @@
 import { FaLocationPin } from "react-icons/fa6"
 
-const Featurehometile = (props: { image: string; place: string; price: number; location: string; time: string }) => {
+const Featurehometile = (props: { image: string; place: string; price: string; location: string; time: string }) => {
     const {image,place,price,location,time}=props
 
   return (

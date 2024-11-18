@@ -7,8 +7,8 @@ const Header = () => {
     const [isView, setIsView] = useState(false);
     const [visible, setVisible] = useState(false);
     const navigate = useNavigate();
-    const navRef = useRef();
-    const showNavbar = () => {
+    const navRef = useRef<HTMLUListElement>(null);
+    const showNavbar = ()=> {
         navRef?.current?.classList?.toggle('responsive_nav');
     }
 

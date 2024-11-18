@@ -136,7 +136,7 @@ const Career = () => {
                           <div className="date-picker-container">
                             <DatePicker
                               selected={startDate}
-                              onChange={(date) => setStartDate(date)}
+                              onChange={(date) => setStartDate(date?? new Date())}
                               open={isOpen}
                               onInputClick={() => setIsOpen(!isOpen)}
                               className="date-input"

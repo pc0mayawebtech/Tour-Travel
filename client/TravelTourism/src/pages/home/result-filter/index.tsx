@@ -1,10 +1,10 @@
 import { Key } from 'react';
 import './index.css';
-const SearchResult = ({ result, setSubmit, fieldName, setIsDropdownVisible, isDropdownVisible }) => {
+const SearchResult = ({ result, setSubmit, fieldName, setIsDropdownVisible, isDropdownVisible }: any) => {
 
     console.log(result, 'apiResult');
     const handleClick = (user: { code: string; city: string; }) => {
-        setSubmit((prev) => ({
+        setSubmit((prev: any) => ({
             ...prev,
             [fieldName]: `${user?.city}, ${user?.code}`,
             [`${fieldName}Code`]: user.code,

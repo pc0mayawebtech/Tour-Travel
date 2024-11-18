@@ -5,13 +5,9 @@ export interface DestructurePropsType {
     content: JSX.Element;
 };
 
-
-export interface StepperPropsType {
-    value: number,
-}
 interface PropsType {
     steps: DestructurePropsType[],
-    currentStep: StepperPropsType,
+    currentStep: number,
 }
 
 const Stepper: React.FC<PropsType> = ({ steps, currentStep }) => {

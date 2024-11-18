@@ -23,14 +23,12 @@ const MoreTripDetails = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [isOpen, setIsOpen] = useState(false);
 
-  const navigate= useNavigate()
-
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     Aos.init({
-      duration:1500,
-        once: true,
+      duration: 1500,
+      once: true,
     });
 
     window.scrollTo({
@@ -38,13 +36,11 @@ const MoreTripDetails = () => {
       left: 100,
       behavior: "smooth",
     });
-    
   }, []);
 
-  const handleClick=()=>{
-    navigate("/flighthotel?scrollTo=featuredHome")
-
-  }
+  const handleClick = () => {
+    navigate("/flighthotel?scrollTo=featuredHome");
+  };
 
   return (
     <>
@@ -157,7 +153,9 @@ const MoreTripDetails = () => {
                           <div className="date-picker-container">
                             <DatePicker
                               selected={startDate}
-                              onChange={(date) => setStartDate(date)}
+                              onChange={(date) =>
+                                setStartDate(date ?? new Date())
+                              }
                               open={isOpen}
                               onInputClick={() => setIsOpen(!isOpen)}
                               className="date-input"
@@ -196,9 +194,10 @@ const MoreTripDetails = () => {
           {TripDetails.map((item, id) => {
             return (
               <div className="col-lg-4 col-md-12 col-sm-12 col-12" key={id}>
-                <div 
-                // data-aos="flip-left"
-                 className="tripDetails">
+                <div
+                  // data-aos="flip-left"
+                  className="tripDetails"
+                >
                   <div className="tripDetailsImage">
                     <img src={item.image} />
                   </div>
@@ -217,19 +216,21 @@ const MoreTripDetails = () => {
               </div>
             );
           })}
-          <div className="moreDestinations" >
+          <div className="moreDestinations">
             <h3>More Destinations in India </h3>
-            <Slick/>
+            <Slick />
           </div>
         </div>
-        <div className="extraDiscount" >
+        <div className="extraDiscount">
           <h3>For Extra Discount</h3>
-          <Promotionslick/>
+          <Promotionslick />
         </div>
 
         <div className="tripHotels">
           <h2>For Hotels and Home </h2>
-          <button className="exploreMoreBtn" onClick={handleClick}>Click Here</button>
+          <button className="exploreMoreBtn" onClick={handleClick}>
+            Click Here
+          </button>
         </div>
       </div>
 

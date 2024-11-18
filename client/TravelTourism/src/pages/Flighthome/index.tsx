@@ -13,7 +13,7 @@ import Footer from '../../shared-components/footer';
 const Flighthome = () => {
     const [isView, setIsView] = useState(false);
     const [isShow, setIsShow] = useState(false);
-    const [startDate, setStartDate] = useState(new Date());
+    const [startDate, setStartDate] = useState<Date>(new Date());
     const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
@@ -125,7 +125,7 @@ const Flighthome = () => {
                           <div className="date-picker-container">
                             <DatePicker
                               selected={startDate}
-                              onChange={(date) => setStartDate(date)}
+                              onChange={(date) => setStartDate(date ?? new Date())}
                               open={isOpen}
                               onInputClick={() => setIsOpen(!isOpen)}
                               className="date-input"

@@ -7,7 +7,11 @@ import { LuClock7 } from "react-icons/lu";
 import { MdOutlineSecurity } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-const PaymentGateway = ({ handleNext }) => {
+
+type PassengerDetailProps = {
+  handleNext: () => void; 
+};
+const PaymentGateway = ({ handleNext }: PassengerDetailProps) => {
   const [accordionData, setAccordinData] = useState({
     one: false,
     two: false,
